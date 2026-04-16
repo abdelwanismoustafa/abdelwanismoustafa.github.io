@@ -4,7 +4,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-site_theme               : "contrast" # try "default" if you prefer a softer look
+site_theme               : "default" # try "default" if you prefer a softer look
 title                    : "Moustafa Abdelwanis"
 title_separator          : "-"
 name                     : &name "Moustafa Abdelwanis"
@@ -30,11 +30,11 @@ author:
   googlescholar    : "https://scholar.google.com/citations?hl=en&user=VwCuh7MAAAAJ"
   inspire-hep      :
   impactstory      :
-  orcid            :
+  orcid            : "https://orcid.org/my-orcid?orcid=0000-0001-5034-2613"
   semantic         :
   ssrn             :
   pubmed           :
-  researchgate     :
+  researchgate     : "https://www.researchgate.net/profile/Moustafa-Abdelwanis?ev=hdr_xprf"
   scopus           :
   zotero           :
 
