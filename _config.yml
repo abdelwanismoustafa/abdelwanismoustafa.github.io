@@ -9,9 +9,9 @@ title                    : "Moustafa Abdelwanis"
 title_separator          : "-"
 name                     : &name "Moustafa Abdelwanis"
 description              : &description "Ph.D. Candidate in Engineering Systems and Management at Khalifa University. Research in operations management, AI in healthcare, human-AI interaction, simulation, and optimization."
-url                      : https://your-github-username.github.io
+url                      : https://abdelwanismoustafa.github.io
 baseurl                  : ""
-repository               : "your-github-username/your-github-username.github.io"
+repository               : "abdelwanismoustafa/abdelwanismoustafa.github.io"
 
 # Site Author
 author:
