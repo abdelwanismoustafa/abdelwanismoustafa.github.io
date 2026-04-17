@@ -1,0 +1,68 @@
+/* ==========================================================================
+   MOUSTAFA THEME - DARK VERSION
+   ========================================================================== */
+
+/* Color codes used for the theme */
+$primary-color            : #5bc0be;
+$gray                     : #8ba0b3;
+$dark-gray                : #d4dde7;
+$darker-gray              : #f2f6fb;
+$light-gray               : #9fb3c8;
+$background               : #0b1320;
+$background-light         : #111b2d;
+$background-lighter       : #1b2638;
+$text                     : #e6edf3;
+$link                     : #7dd3fc;
+$link-dark                : #bae6fd;
+$link-light               : #67e8f9;
+$footer                   : #08111d;
+
+/* Color codes used for notices */
+$danger-color             : #f87171;
+$info-color               : #5bc0be;
+$notice-color             : #94a3b8;
+$success-color            : #4ade80;
+$warning-color            : #f59e0b;
+
+/* Layout variables */
+$border-radius            : 6px;
+$box-shadow               : 0 18px 40px rgba(0, 0, 0, 0.30);
+$global-transition        : all 0.22s ease-in-out;
+$masthead-height          : 72px;
+$navicon-width            : 28px;
+$navicon-height           : 4px;
+$sidebar-link-max-width   : 280px;
+$sidebar-screen-min-width : 1024px;
+
+html[data-theme="dark"] {
+  --global-base-color                 : #{$primary-color};
+  --global-bg-color                   : #{$background};
+  --global-footer-bg-color            : #{$footer};
+  --global-border-color               : #203049;
+  --global-dark-border-color          : #2a3b56;
+  --global-code-background-color      : #0f172a;
+  --global-code-text-color            : #e6edf3;
+  --global-fig-caption-color          : #b9c6d2;
+  --global-link-color                 : #{$link};
+  --global-link-color-hover           : #{$link-dark};
+  --global-link-color-visited         : #{$link-light};
+  --global-masthead-link-color        : #{$text};
+  --global-masthead-link-color-hover  : #{$primary-color};
+  --global-text-color                 : #{$text};
+  --global-text-color-light           : #b9c6d2;
+  --global-thead-color                : #{$background-lighter};
+
+  /* Custom variables for the personalized look */
+  --m-primary-strong                  : #7dd3fc;
+  --m-surface                         : #101a2b;
+  --m-surface-2                       : #122235;
+  --m-muted                           : #b9c6d2;
+  --m-accent                          : #f59e0b;
+  --m-outline                         : rgba(125, 211, 252, 0.16);
+  --m-shadow                          : 0 24px 48px rgba(0, 0, 0, 0.32);
+  --m-shadow-soft                     : 0 18px 34px rgba(0, 0, 0, 0.22);
+  --m-hero-gradient-start             : #0f3b4b;
+  --m-hero-gradient-end               : #0b1f35;
+  --m-selection-bg                    : rgba(125, 211, 252, 0.20);
+  --m-selection-text                  : #f2f6fb;
+}

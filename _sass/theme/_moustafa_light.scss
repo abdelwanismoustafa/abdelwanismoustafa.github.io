@@ -1,0 +1,69 @@
+/* ==========================================================================
+   MOUSTAFA THEME - LIGHT VERSION
+   ========================================================================== */
+
+/* Color codes used for the theme */
+$primary-color            : #0f766e;
+$gray                     : #7b8794;
+$dark-gray                : #243b53;
+$darker-gray              : #102a43;
+$light-gray               : #9fb3c8;
+$lighter-gray             : #e6edf3;
+$background               : #f7faf9;
+$background-light         : #ffffff;
+$background-lighter       : #eef4f3;
+$text                     : #1f2937;
+$link                     : #0f766e;
+$link-dark                : #0b5e56;
+$link-light               : #134e4a;
+$footer                   : #edf4f2;
+
+/* Color codes used for notices */
+$danger-color             : #dc2626;
+$info-color               : #0f766e;
+$notice-color             : #64748b;
+$success-color            : #16a34a;
+$warning-color            : #b45309;
+
+/* Layout variables */
+$border-radius            : 6px;
+$box-shadow               : 0 12px 32px rgba(15, 23, 42, 0.08);
+$global-transition        : all 0.22s ease-in-out;
+$masthead-height          : 72px;
+$navicon-width            : 28px;
+$navicon-height           : 4px;
+$sidebar-link-max-width   : 280px;
+$sidebar-screen-min-width : 1024px;
+
+:root {
+  --global-base-color                 : #{$primary-color};
+  --global-bg-color                   : #{$background};
+  --global-footer-bg-color            : #{$footer};
+  --global-border-color               : #{$lighter-gray};
+  --global-dark-border-color          : #d7e2e0;
+  --global-code-background-color      : #eef6f5;
+  --global-code-text-color            : #{$darker-gray};
+  --global-fig-caption-color          : #52606d;
+  --global-link-color                 : #{$link};
+  --global-link-color-hover           : #{$link-dark};
+  --global-link-color-visited         : #{$link-light};
+  --global-masthead-link-color        : #{$dark-gray};
+  --global-masthead-link-color-hover  : #{$primary-color};
+  --global-text-color                 : #{$text};
+  --global-text-color-light           : #52606d;
+  --global-thead-color                : #{$background-lighter};
+
+  /* Custom variables for the personalized look */
+  --m-primary-strong                  : #134e4a;
+  --m-surface                         : #ffffff;
+  --m-surface-2                       : #eef6f5;
+  --m-muted                           : #52606d;
+  --m-accent                          : #a16207;
+  --m-outline                         : rgba(15, 118, 110, 0.16);
+  --m-shadow                          : 0 20px 44px rgba(15, 23, 42, 0.10);
+  --m-shadow-soft                     : 0 14px 30px rgba(15, 23, 42, 0.06);
+  --m-hero-gradient-start             : #0f766e;
+  --m-hero-gradient-end               : #134e4a;
+  --m-selection-bg                    : rgba(15, 118, 110, 0.16);
+  --m-selection-text                  : #102a43;
+}
