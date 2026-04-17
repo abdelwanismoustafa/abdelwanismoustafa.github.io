@@ -26,12 +26,12 @@ author:
   googlescholar    : "https://scholar.google.com/citations?hl=en&user=VwCuh7MAAAAJ&view_op=list_works"
   inspire-hep      :
   impactstory      :
-  orcid            :
+  orcid            : "https://orcid.org/my-orcid?orcid=0000-0001-5034-2613"
   semantic         :
   ssrn             :
   pubmed           :
-  researchgate     :
-  scopus           :
+  researchgate     : "https://www.researchgate.net/profile/Moustafa-Abdelwanis?ev=hdr_xprf"
+  scopus           : "https://www.scopus.com/authid/detail.uri?authorId=58636095200&__cf_chl_tk=DZovOjuDhNz_Ag5Dm_ePdT0xcvDuVGfLVlSgY0caC4E-1775740105-1.0.1.1-00HX19KnRzP25FKjBczI4XXiLo2wmhLhhbd2yHyLyYI"
   zotero           :
 
   # Repositories and software development
@@ -53,7 +53,7 @@ author:
   keybase          :
   instagram        :
   lastfm           :
-  linkedin         :
+  linkedin         : "moustafa-abdelwanis/"
   mastodon         :
   medium           :
   pinterest        :
@@ -128,7 +128,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : "profile.png"
+og_image                 : "IMG_0089.jpeg"
 og_description           : *description
 social:
   type                   : Person
