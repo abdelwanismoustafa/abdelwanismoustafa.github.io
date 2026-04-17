@@ -11,6 +11,7 @@ redirect_from:
   <div class="hero-badge">Engineering Systems and Management • Khalifa University</div>
   <h1 class="hero-title">Moustafa Abdelwanis</h1>
   <p class="hero-subtitle">Ph.D. candidate researching operations management, AI in healthcare, human-AI interaction, simulation, and optimization, with a focus on safe and practically deployable decision support for healthcare and service systems.</p>
+  <p class="hero-subtitle">Expected to graduate in December 2026.</p>
   <div class="hero-actions">
     <a class="btn btn--primary" href="/publications/">View Publications</a>
     <a class="btn btn--inverse" href="/files/Moustafa_Abdelwanis_CV.pdf">Download CV</a>
