@@ -1,11 +1,15 @@
 main:
   - title: "Research"
     url: /research/
+
   - title: "Publications"
     url: /publications/
+
   - title: "Teaching"
     url: /teaching/
+
   - title: "Awards"
     url: /awards/
+
   - title: "CV"
     url: /files/Moustafa_Abdelwanis_CV.pdf
