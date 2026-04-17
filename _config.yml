@@ -1,24 +1,20 @@
-# Replace every instance of "your-github-username" with your real GitHub username.
-# If this is a project site instead of a user site, set baseurl to "/repo-name"
-# and change repository accordingly.
-
-# Basic Site Settings
+# Core site identity
 locale                   : "en-US"
-site_theme               : "moustafa" # try "default" if you prefer a softer look
+site_theme               : "moustafa"
 title                    : "Moustafa Abdelwanis"
 title_separator          : "-"
 name                     : &name "Moustafa Abdelwanis"
-description              : &description "Ph.D. Candidate in Engineering Systems and Management at Khalifa University. Research in operations management, AI in healthcare, human-AI interaction, and simulation-based optimization."
-url                      : https://abdelwanismoustafa.github.io
+description              : &description "Ph.D. Candidate in Engineering Systems and Management at Khalifa University. Research in operations management, AI in healthcare, human-AI interaction, simulation, and optimization."
+url                      : "https://abdelwanismoustafa.github.io"
 baseurl                  : ""
 repository               : "abdelwanismoustafa/abdelwanismoustafa.github.io"
 
-# Site Author
+# Sidebar / author profile
 author:
-  avatar           : "IMG_0089.jpeg" # place in /images/
+  avatar           : "profile.png"
   name             : "Moustafa Abdelwanis"
   pronouns         :
-  bio              : "Ph.D. candidate in Engineering Systems and Management working on operations management, AI in healthcare, human-AI interaction, and simulation-based optimization."
+  bio              : "Ph.D. candidate working on operations management, AI in healthcare, human-AI interaction, simulation, and optimization."
   location         : "Abu Dhabi, United Arab Emirates"
   employer         : "Khalifa University"
   uri              :
@@ -27,22 +23,22 @@ author:
   # Academic websites
   academia         :
   arxiv            :
-  googlescholar    : "https://scholar.google.com/citations?hl=en&user=VwCuh7MAAAAJ"
+  googlescholar    : "https://scholar.google.com/citations?hl=en&user=VwCuh7MAAAAJ&view_op=list_works"
   inspire-hep      :
   impactstory      :
-  orcid            : "https://orcid.org/my-orcid?orcid=0000-0001-5034-2613"
+  orcid            :
   semantic         :
   ssrn             :
   pubmed           :
-  researchgate     : "https://www.researchgate.net/profile/Moustafa-Abdelwanis?ev=hdr_xprf"
-  scopus           : "https://www.scopus.com/authid/detail.uri?authorId=58636095200&__cf_chl_tk=DZovOjuDhNz_Ag5Dm_ePdT0xcvDuVGfLVlSgY0caC4E-1775740105-1.0.1.1-00HX19KnRzP25FKjBczI4XXiLo2wmhLhhbd2yHyLyYI"
+  researchgate     :
+  scopus           :
   zotero           :
 
   # Repositories and software development
   bitbucket        :
   codepen          :
   dribbble         :
-  github           :
+  github           : "abdelwanismoustafa"
   kaggle           :
   stackoverflow    :
 
@@ -57,7 +53,7 @@ author:
   keybase          :
   instagram        :
   lastfm           :
-  linkedin         : "moustafa-abdelwanis"
+  linkedin         :
   mastodon         :
   medium           :
   pinterest        :
@@ -73,18 +69,17 @@ author:
   youtube          :
   zhihu            :
 
-# Publication categories shown on the publications page
 publication_category:
+  books:
+    title: "Books"
   manuscripts:
     title: "Journal Articles"
   conferences:
     title: "Conference Papers"
   preprints:
     title: "Preprints"
-  theses:
-    title: "Theses"
 
-# Site Settings
+# Site behavior
 teaser                   :
 breadcrumbs              : false
 words_per_minute         : 180
@@ -121,34 +116,31 @@ atom_feed:
   hide                   : false
   path                   :
 
-# SEO
+# SEO / social
 google_site_verification :
 bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
 
-# Social Sharing
 twitter:
   username               : &twitter
 facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : "IMG_0089.jpeg"
+og_image                 : "profile.png"
 og_description           : *description
 social:
   type                   : Person
   name                   : "Moustafa Abdelwanis"
   links:
-    - "https://scholar.google.com/citations?hl=en&user=VwCuh7MAAAAJ"
+    - "https://scholar.google.com/citations?hl=en&user=VwCuh7MAAAAJ&view_op=list_works"
 
-# Analytics
 analytics:
   provider               : false
   google:
     tracking_id          :
 
-# Reading Files
 include:
   - .htaccess
   - _pages
@@ -186,14 +178,12 @@ keep_files:
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
-# Conversion
 markdown: kramdown
 highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
 
-# Markdown Processing
 kramdown:
   input: GFM
   hard_wrap: false
@@ -204,7 +194,6 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
-# Collections
 collections:
   teaching:
     output: true
@@ -219,7 +208,6 @@ collections:
     output: true
     permalink: /:collection/:path/
 
-# Defaults
 defaults:
   - scope:
       path: ""
@@ -269,16 +257,13 @@ defaults:
       author_profile: true
       share: false
 
-# Sass/SCSS
 sass:
   sass_dir: _sass
   style: compressed
 
-# Outputting
 permalink: /:categories/:title/
 timezone: Asia/Dubai
 
-# Plugins
 plugins:
   - jekyll-feed
   - jekyll-gist
@@ -287,7 +272,6 @@ plugins:
   - jekyll-redirect-from
   - jemoji
 
-# Mimic GitHub Pages with --safe
 whitelist:
   - jekyll-feed
   - jekyll-gist
@@ -296,7 +280,6 @@ whitelist:
   - jekyll-redirect-from
   - jemoji
 
-# Archives
 category_archive:
   type: liquid
   path: /categories/
@@ -304,7 +287,6 @@ tag_archive:
   type: liquid
   path: /tags/
 
-# HTML Compression
 compress_html:
   clippings: all
   ignore:
