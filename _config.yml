@@ -4,11 +4,11 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-site_theme               : "default" # try "default" if you prefer a softer look
+site_theme               : "moustafa" # try "default" if you prefer a softer look
 title                    : "Moustafa Abdelwanis"
 title_separator          : "-"
 name                     : &name "Moustafa Abdelwanis"
-description              : &description "Ph.D. Candidate in Engineering Systems and Management at Khalifa University. Research in operations management, AI in healthcare, human-AI interaction, simulation, and optimization."
+description              : &description "Ph.D. Candidate in Engineering Systems and Management at Khalifa University. Research in operations management, AI in healthcare, human-AI interaction, and simulation-based optimization."
 url                      : https://abdelwanismoustafa.github.io
 baseurl                  : ""
 repository               : "abdelwanismoustafa/abdelwanismoustafa.github.io"
@@ -18,7 +18,7 @@ author:
   avatar           : "IMG_0089.jpeg" # place in /images/
   name             : "Moustafa Abdelwanis"
   pronouns         :
-  bio              : "Ph.D. candidate in Engineering Systems and Management working on operations management, AI in healthcare, human-AI interaction, simulation, and optimization."
+  bio              : "Ph.D. candidate in Engineering Systems and Management working on operations management, AI in healthcare, human-AI interaction, and simulation-based optimization."
   location         : "Abu Dhabi, United Arab Emirates"
   employer         : "Khalifa University"
   uri              :
