@@ -12,7 +12,8 @@ redirect_from:
   <h1 class="hero-title">Moustafa Abdelwanis</h1>
   <p class="hero-subtitle">Ph.D. candidate researching operations management, AI in healthcare, human-AI interaction, simulation, and optimization, with a focus on safe and practically deployable decision support for healthcare and service systems.</p>
   <div class="hero-actions">
-    <a class="btn btn--primary" href="/files/Moustafa_Abdelwanis_CV.pdf">Download CV</a>
+    <a class="btn btn--primary" href="/publications/">View Publications</a>
+    <a class="btn btn--inverse" href="/files/Moustafa_Abdelwanis_CV.pdf">Download CV</a>
     <a class="btn btn--inverse" href="https://scholar.google.com/citations?hl=en&user=VwCuh7MAAAAJ&view_op=list_works">Google Scholar</a>
     <a class="btn btn--inverse" href="mailto:moustafa.abdelwanis@ku.ac.ae">Email</a>
   </div>
@@ -20,18 +21,28 @@ redirect_from:
 
 <section class="quick-stats">
   <div class="stat-card">
+    <span class="stat-number">13</span>
+    <div class="stat-title">Research outputs</div>
+    <div class="stat-label">6 journal articles, 6 conference papers, and 1 thesis currently featured on the publications page.</div>
+  </div>
+  <div class="stat-card">
+    <span class="stat-number">6</span>
+    <div class="stat-title">Journal articles</div>
+    <div class="stat-label">Recent work in Safety Science, Computers &amp; Operations Research, Computers in Biology and Medicine, Journal of Heuristics, and Scientific Reports.</div>
+  </div>
+  <div class="stat-card">
+    <span class="stat-number">6</span>
+    <div class="stat-title">Conference papers</div>
+    <div class="stat-label">Proceedings contributions across WSC, CIE, ICVNS, and Computing in Cardiology.</div>
+  </div>
+  <div class="stat-card">
     <span class="stat-number">3</span>
-    <div class="stat-label">Core research directions spanning AI adoption, service-system optimization, and clinical decision support.</div>
-  </div>
-  <div class="stat-card">
-    <span class="stat-number">2</span>
-    <div class="stat-label">Recent best-paper distinctions in industrial engineering and graduate research competition settings.</div>
-  </div>
-  <div class="stat-card">
-    <span class="stat-number">2021</span>
-    <div class="stat-label">Graduate Research and Teaching Assistant at Khalifa University, supporting research and teaching in Engineering Systems and Management.</div>
+    <div class="stat-title">Awards and distinctions</div>
+    <div class="stat-label">Including CIE 50 Best Paper, GSRC Best Paper, and Outstanding Graduate Student at Khalifa University.</div>
   </div>
 </section>
+
+<p class="stats-note">Current analytics shown on the site: 197 Google Scholar citations, h-index 4, and i10-index 3.</p>
 
 <section class="section-block">
   <h2 class="section-title">Research focus</h2>
@@ -95,7 +106,7 @@ redirect_from:
       <ul class="point-list">
         <li>Best Paper Award, 50th International Conference on Computers and Industrial Engineering (CIE 50), 2023.</li>
         <li>Best Paper Award, Graduate Student Research Competition (GSRC), American University in Sharjah, 2024.</li>
-        <li>Conference participation at WSC 2024, CIE 50, and ICVNS 2022.</li>
+        <li>Outstanding Graduate Student, Graduate Students Research Awards, Khalifa University, 2024.</li>
       </ul>
     </article>
   </div>
@@ -103,7 +114,7 @@ redirect_from:
 
 <section class="section-block">
   <h2 class="section-title">Selected publications</h2>
-  <p class="section-intro">Representative work across AI adoption in healthcare, service-system optimization, and clinical analytics. The full list can live on your publications page.</p>
+  <p class="section-intro">Recent work appears in Safety Science, Computers &amp; Operations Research, Scientific Reports, the Winter Simulation Conference, CIE, and Computing in Cardiology. Visit the publications page for the full searchable record and publication analytics.</p>
 
   <div class="publication-list">
     <article class="pub-card">
@@ -159,10 +170,11 @@ redirect_from:
 <section class="contact-strip">
   <div>
     <h3>Open to research collaboration and academic exchange</h3>
-    <p>Use the links below to reach out, read publications, or download the current CV.</p>
+    <p>Use the links below to reach out, browse the full publication list, or download the current CV.</p>
   </div>
   <div class="contact-actions">
-    <a class="btn btn--primary" href="mailto:moustafa.abdelwanis@ku.ac.ae">Contact</a>
+    <a class="btn btn--primary" href="/publications/">Publications</a>
+    <a class="btn btn--inverse" href="mailto:moustafa.abdelwanis@ku.ac.ae">Contact</a>
     <a class="btn btn--inverse" href="https://scholar.google.com/citations?hl=en&user=VwCuh7MAAAAJ&view_op=list_works">Scholar profile</a>
   </div>
 </section>
