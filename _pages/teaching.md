@@ -9,7 +9,7 @@ As a Graduate Research and Teaching Assistant in Engineering Systems and Managem
 
 ## Teaching Courses
 
-- Operations resarch (Bsc)
+- Operations resarch (Bsc, Msc)
 - Healthcare management (Msc)
 - Stochastic Processes (Bsc)
 - Business analytics (Msc)
