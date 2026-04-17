@@ -46,7 +46,3 @@ Representative topics:
 - Cardiac autonomic neuropathy assessment
 - Depression severity detection
 
-
-- Safety research (SEIPS, Bowtie analysis)
-- Structural Equation Modeling
-- Python, R, AnyLogic, Jamovi
