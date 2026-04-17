@@ -5,7 +5,7 @@ permalink: /research/
 author_profile: true
 ---
 
-My research integrates operations management, simulation, and data analytics to address real-world challenges in healthcare and service systems. My interests focus on the development and implementation of technology-based decision support tools to enhance clinical practice.
+My research integrates operations management, simulation, and data analytics to address real-world challenges in healthcare and service systems. My interests focus on the development and implementation of technology-based decision support tools to enhance operational efficiency.
 
 ## 1. AI adoption in healthcare
 
