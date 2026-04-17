@@ -5,11 +5,11 @@ permalink: /research/
 author_profile: true
 ---
 
-My research combines operations research, simulation, human factors, and AI to address real problems in healthcare and service systems. I am especially interested in methods that are not only analytically sound, but also implementable in practice.
+My research integrates operations management, simulation, and data analytics to address real-world challenges in healthcare and service systems. My interests focus on the development and implementation of technology-based decision support tools to enhance clinical practice.
 
 ## 1. AI adoption in healthcare
 
-I study the organizational, human, and safety factors that influence the adoption of AI in healthcare settings. This includes healthcare providers' perceptions, implementation barriers, and the design of interventions that improve trust, safety, and usability.
+Studying the organizational, human, and safety factors that influence the adoption of AI in healthcare settings. This includes healthcare providers' perceptions, implementation barriers, and the design of interventions that improve trust, safety, and usability.
 
 Representative topics:
 - healthcare AI adoption barriers
@@ -19,7 +19,7 @@ Representative topics:
 
 ## 2. Simulation-based optimization
 
-I work on simulation-based approaches for difficult optimization problems in service operations, especially when uncertainty, cross-training, resource allocation, and inventories interact in complex ways.
+Utilizing simulation-based optimization approaches for optimzing skill-assignments in service operations.
 
 Representative topics:
 - variable neighborhood search
@@ -27,9 +27,9 @@ Representative topics:
 - service queue design
 - simulation for healthcare and operations systems
 
-## 3. Healthcare analytics and machine learning
+## 3. Healthcare data analytics and AI
 
-I apply data-driven methods to support clinical assessment and decision-making. My work explores classification pipelines, interpretable modeling, and practical healthcare analytics applications.
+Applying data-driven approach to support clinical assessment of prelvent discese and decision-making. My work explores classification pipelines, interpretable modeling, and practical healthcare analytics applications.
 
 Representative topics:
 - cardiac autonomic neuropathy assessment
