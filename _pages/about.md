@@ -53,7 +53,7 @@ redirect_from:
     <article class="theme-card">
       <div class="card-label">AI in healthcare</div>
       <h3>Adoption, trust, and automation risk</h3>
-      <p>I study how healthcare professionals adopt AI tools, what shapes trust and usability, and how risks such as automation bias can be identified and mitigated in practice.</p>
+      <p>Studying factors affecting AI integration in healthcare. This includes healthcare providers’ perceptions, implementation barriers, and the design of interventions that improve trust, safety, and usability.</p>
       <ul class="tag-list">
         <li class="tag">Human-AI interaction</li>
         <li class="tag">Automation bias</li>
@@ -64,10 +64,10 @@ redirect_from:
     <article class="theme-card">
       <div class="card-label">Operations research</div>
       <h3>Simulation and optimization for service systems</h3>
-      <p>I develop simulation-based optimization methods for multi-server, inventory-constrained, and cross-trained service systems, with applications in healthcare and operations management.</p>
+      <p>Developing simulation-based optimization frameworks for optimizing skill allocations in multi-skill, multi-server service systems, with applications in healthcare and maintenance systems.</p>
       <ul class="tag-list">
         <li class="tag">Simulation modeling</li>
-        <li class="tag">Optimization</li>
+        <li class="tag">Heuristics</li>
         <li class="tag">Service operations</li>
       </ul>
     </article>
@@ -75,11 +75,11 @@ redirect_from:
     <article class="theme-card">
       <div class="card-label">Clinical analytics</div>
       <h3>Data-driven decision support</h3>
-      <p>I apply machine learning and analytics to support clinical assessment and risk prediction, including work on cardiac autonomic neuropathy and depression severity detection.</p>
+      <p>Applying machine learning and analytics to support clinical assessment and risk prediction, including work on cardiac autonomic neuropathy and depression severity detection.</p>
       <ul class="tag-list">
         <li class="tag">Machine learning</li>
         <li class="tag">Clinical decision support</li>
-        <li class="tag">Healthcare analytics</li>
+        <li class="tag">Explainable AI</li>
       </ul>
     </article>
   </div>
@@ -96,8 +96,8 @@ redirect_from:
       <ul class="point-list">
         <li>Ph.D. candidate in Engineering Systems and Management at Khalifa University.</li>
         <li>Graduate Research and Teaching Assistant since 2021.</li>
-        <li>Research spanning operations management, AI in healthcare, human-AI interaction, simulation, and optimization.</li>
-        <li>Methods toolkit including simulation modeling, optimization, variable neighborhood search, Bowtie analysis, structural equation modeling, Python, R, and AnyLogic.</li>
+        <li>Research spanning operations management, AI in healthcare, human-AI interaction, and simulation-based optimization.</li>
+        <li>Methods toolkit including simulation-based optimization, heuristics, Bowtie analysis, structural equation modeling, Python, R, and AnyLogic.</li>
       </ul>
     </article>
 
