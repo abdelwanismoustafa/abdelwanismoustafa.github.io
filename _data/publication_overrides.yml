@@ -1,8 +1,8 @@
 by_doi:
   10.1016/j.ssci.2025.107028:
-    description: Systematic review of 92 studies that maps 16 barriers to healthcare AI adoption with
-      the HOT framework and proposes a staged assessment, implementation, and monitoring framework for
-      safer integration.
+    description: Systematic review of 92 studies that maps 16 barriers to healthcare
+      AI adoption with the HOT framework and proposes a staged assessment, implementation,
+      and monitoring framework for safer integration.
     highlight: Review article
     theme_slugs:
     - ai-healthcare
@@ -23,14 +23,14 @@ by_doi:
       url: https://doi.org/10.1016/j.ssci.2025.107028
     - label: Journal page
       url: https://www.sciencedirect.com/science/article/pii/S092575352500253X
-    authors: Moustafa Abdelwanis, Mecit Can Emre Simsekler, Adriana F. Gabor, Andrei Sleptchenko, and
-      Mohammad Omar
+    authors: Moustafa Abdelwanis, Mecit Can Emre Simsekler, Adriana F. Gabor, Andrei
+      Sleptchenko, and Mohammad Omar
     venue: Safety Science, vol. 193, article 107028 (2026)
-    citations: 15
+    citations: 16
   10.1007/s10732-025-09574-1:
-    description: Review of 30 healthcare rostering studies using variable neighborhood search, synthesizing
-      objective functions, algorithm designs, and experiment practices to identify open directions in
-      healthcare operations research.
+    description: Review of 30 healthcare rostering studies using variable neighborhood
+      search, synthesizing objective functions, algorithm designs, and experiment
+      practices to identify open directions in healthcare operations research.
     highlight: Review article
     theme_slugs:
     - operations-optimization
@@ -50,13 +50,13 @@ by_doi:
       url: https://doi.org/10.1007/s10732-025-09574-1
     - label: Journal page
       url: https://link.springer.com/article/10.1007/s10732-025-09574-1
-    authors: Moustafa Abdelwanis, Eman Ouda, Dima Al Absi, Firda Rahmadani, Mecit Can Emre Simsekler,
-      and Andrei Sleptchenko
+    authors: Moustafa Abdelwanis, Eman Ouda, Dima Al Absi, Firda Rahmadani, Mecit
+      Can Emre Simsekler, and Andrei Sleptchenko
     venue: Journal of Heuristics, vol. 32, article 2 (2026)
   10.1016/j.compbiomed.2025.109999:
-    description: Two-stage CAN classification framework that first uses inflammatory markers and then
-      selectively adds Ewing tests, improving diagnostic efficiency while reducing the number of tests
-      needed for most patients.
+    description: Two-stage CAN classification framework that first uses inflammatory
+      markers and then selectively adds Ewing tests, improving diagnostic efficiency
+      while reducing the number of tests needed for most patients.
     highlight: Clinical decision support
     theme_slugs:
     - clinical-analytics
@@ -76,13 +76,13 @@ by_doi:
       url: https://doi.org/10.1016/j.compbiomed.2025.109999
     - label: Abstract
       url: https://www.sciencedirect.com/science/article/pii/S0010482525003506
-    authors: Moustafa Abdelwanis, Karim Moawad, Shahmir Mohammed, Ammar Hummieda, Shayaan Syed, Maher
-      Maalouf, and Herbert F. Jelinek
+    authors: Moustafa Abdelwanis, Karim Moawad, Shahmir Mohammed, Ammar Hummieda,
+      Shayaan Syed, Maher Maalouf, and Herbert F. Jelinek
     venue: Computers in Biology and Medicine, vol. 190, article 109999 (2025)
   10.1016/j.cor.2024.106546:
-    description: Jointly optimizes repair-skill assignments and inventory levels in a multi-skill repair
-      system using simulation-based VNS, outperforming a prior genetic algorithm in both cost and convergence
-      speed.
+    description: Jointly optimizes repair-skill assignments and inventory levels in
+      a multi-skill repair system using simulation-based VNS, outperforming a prior
+      genetic algorithm in both cost and convergence speed.
     highlight: Operations research
     theme_slugs:
     - operations-optimization
@@ -105,8 +105,9 @@ by_doi:
     venue: Computers & Operations Research, vol. 164, article 106546 (2024)
     citations: 5
   10.1016/j.jnlssr.2024.06.001:
-    description: Bowtie-based analysis of automation bias in AI-driven clinical decision support, mapping
-      causes, consequences, and mitigation measures across design and post-deployment stages.
+    description: Bowtie-based analysis of automation bias in AI-driven clinical decision
+      support, mapping causes, consequences, and mitigation measures across design
+      and post-deployment stages.
     highlight: Most cited
     theme_slugs:
     - ai-healthcare
@@ -126,13 +127,14 @@ by_doi:
       url: https://doi.org/10.1016/j.jnlssr.2024.06.001
     - label: Record
       url: https://nchr.elsevierpure.com/en/publications/exploring-the-risks-of-automation-bias-in-healthcare-artificial-i/
-    authors: Moustafa Abdelwanis, Hamdan Khalaf Alarafati, Maram Muhanad Saleh Tammam, and Mecit Can Emre
-      Simsekler
+    authors: Moustafa Abdelwanis, Hamdan Khalaf Alarafati, Maram Muhanad Saleh Tammam,
+      and Mecit Can Emre Simsekler
     venue: Journal of Safety Science and Resilience, 5(4), 460-469 (2024)
-    citations: 134
+    citations: 136
   10.1038/s41598-024-67251-y:
-    description: Machine learning study on 830 participants showing that weighted random forest improves
-      multiclass depression-severity detection and that oxidative stress biomarkers remain highly informative.
+    description: Machine learning study on 830 participants showing that weighted
+      random forest improves multiclass depression-severity detection and that oxidative
+      stress biomarkers remain highly informative.
     highlight: Clinical ML
     theme_slugs:
     - clinical-analytics
@@ -155,9 +157,9 @@ by_doi:
     venue: Scientific Reports, vol. 14, article 16328 (2024)
     citations: 37
   10.1109/wsc63780.2024.10838843:
-    description: Simulation study of nurse cross-training in an Abu Dhabi emergency department showing
-      that pooling triage and adult-zone nurses sharply reduces triage length of stay during demand surges
-      and improves operational resilience.
+    description: Simulation study of nurse cross-training in an Abu Dhabi emergency
+      department showing that pooling triage and adult-zone nurses sharply reduces
+      triage length of stay during demand surges and improves operational resilience.
     highlight: Healthcare resilience
     theme_slugs:
     - operations-optimization
@@ -176,12 +178,13 @@ by_doi:
       url: https://doi.org/10.1109/WSC63780.2024.10838843
     - label: PDF
       url: https://informs-sim.org/wsc24papers/con122.pdf
-    authors: Moustafa Abdelwanis, Eman Ouda, Andrei Sleptchenko, Adriana F. Gabor, Mecit Can Emre Simsekler,
-      and Mohammed Omar
+    authors: Moustafa Abdelwanis, Eman Ouda, Andrei Sleptchenko, Adriana F. Gabor,
+      Mecit Can Emre Simsekler, and Mohammed Omar
     venue: 2024 Winter Simulation Conference (WSC), pp. 894-905 (2024)
   10.22489/cinc.2023.097:
-    description: Conference paper that predicts CART outcomes from inflammatory markers using an ANN on
-      2,621 patient entries, outperforming baseline models and highlighting MCP-1, IGF-1, and IL-1Beta.
+    description: Conference paper that predicts CART outcomes from inflammatory markers
+      using an ANN on 2,621 patient entries, outperforming baseline models and highlighting
+      MCP-1, IGF-1, and IL-1Beta.
     highlight: Clinical ML
     theme_slugs:
     - clinical-analytics
@@ -202,13 +205,13 @@ by_doi:
       url: https://www.cinc.org/archives/2023/pdf/CinC2023-097.pdf
     - label: Research record
       url: https://nchr.elsevierpure.com/en/publications/artificial-neural-network-for-predicting-cardiovascular-autonomic/
-    authors: Moustafa Abdelwanis, Shahmir Khan, Ammar Hummieda, Shayaan Syed, Karim Moawad, Maher Maalouf,
-      and Herbert F. Jelinek
+    authors: Moustafa Abdelwanis, Shahmir Khan, Ammar Hummieda, Shayaan Syed, Karim
+      Moawad, Maher Maalouf, and Herbert F. Jelinek
     venue: Computing in Cardiology (CinC 2023), pp. 1-4 (2023)
   10.1007/978-3-031-34500-5_4:
-    description: Conference chapter developing a simulation-based VNS to optimize cross-training policies
-      in a multi-skill repair facility with spare-parts inventory, benchmarked against brute-force and
-      genetic-algorithm baselines.
+    description: Conference chapter developing a simulation-based VNS to optimize
+      cross-training policies in a multi-skill repair facility with spare-parts inventory,
+      benchmarked against brute-force and genetic-algorithm baselines.
     highlight: Methodological foundation
     theme_slugs:
     - operations-optimization
@@ -228,15 +231,16 @@ by_doi:
     - label: Chapter page
       url: https://link.springer.com/chapter/10.1007/978-3-031-34500-5_4
     authors: Moustafa Abdelwanis, Nenad Mladenovic, and Andrei Sleptchenko
-    venue: International Conference on Variable Neighborhood Search (ICVNS 2022), LNCS 13863, pp. 42-57
-      (2023)
+    venue: International Conference on Variable Neighborhood Search (ICVNS 2022),
+      LNCS 13863, pp. 42-57 (2023)
 by_title:
   optimizing-skill-allocation-in-healthcare-facilities-using-variable-neighborhood-descent:
-    description: Conference paper on optimization of skill allocation in healthcare facilities using variable
-      neighborhood descent. Publicly available sources confirm the bibliographic record, but I could not
-      verify a public abstract.
-    summary_note: The summary above is intentionally conservative because the verified public sources
-      I found expose the title, venue, page number, and authorship, but not a public abstract.
+    description: Conference paper on optimization of skill allocation in healthcare
+      facilities using variable neighborhood descent. Publicly available sources confirm
+      the bibliographic record, but I could not verify a public abstract.
+    summary_note: The summary above is intentionally conservative because the verified
+      public sources I found expose the title, venue, page number, and authorship,
+      but not a public abstract.
     highlight: CIE52
     theme_slugs:
     - operations-optimization
@@ -253,11 +257,14 @@ by_title:
       url: https://www.proceedings.com/content/084/084193webtoc.pdf
     - label: Scholar profile
       url: https://scholar.google.com/citations?hl=en&user=VwCuh7MAAAAJ&view_op=list_works
-    authors: Moustafa Abdelwanis, Adriana Gabor, Andrei Sleptchenko, and Mecit Can Emre Simsekler
-    venue: 52nd International Conference on Computers & Industrial Engineering (CIE52), p. 531 (2025)
+    authors: Moustafa Abdelwanis, Adriana Gabor, Andrei Sleptchenko, and Mecit Can
+      Emre Simsekler
+    venue: 52nd International Conference on Computers & Industrial Engineering (CIE52),
+      p. 531 (2025)
   exploring-drivers-and-barriers-of-adopting-ai-driven-technologies-in-health-systems:
-    description: Conference paper on organizational, technological, and human barriers to AI adoption
-      in health systems, including automation-bias concerns and implementation challenges.
+    description: Conference paper on organizational, technological, and human barriers
+      to AI adoption in health systems, including automation-bias concerns and implementation
+      challenges.
     highlight: Additional verified output
     theme_slugs:
     - ai-healthcare
@@ -277,15 +284,17 @@ by_title:
       url: https://nchr.elsevierpure.com/en/publications/exploring-drivers-and-barriers-of-adopting-ai-driven-technologies/
     - label: Proceedings TOC
       url: https://www.proceedings.com/content/079/079578webtoc.pdf
-    authors: Moustafa Abdelwanis, Mecit Can Emre Simsekler, Andrei Sleptchenko, Adriana F. Gabor, and
-      Mohammed Omar
-    venue: 51st International Conference on Computers & Industrial Engineering (CIE51), pp. 1224-1233
-      (2024)
+    authors: Moustafa Abdelwanis, Mecit Can Emre Simsekler, Andrei Sleptchenko, Adriana
+      F. Gabor, and Mohammed Omar
+    venue: 51st International Conference on Computers & Industrial Engineering (CIE51),
+      pp. 1224-1233 (2024)
   joint-optimization-and-demand-and-resources-allocations-in-decentralized-manufacturing:
-    description: Conference paper on decentralized manufacturing optimization. Publicly available sources
-      confirm the bibliographic record and authorship, but I could not verify a public abstract.
-    summary_note: The summary above is title-based because the verified public sources I found expose
-      the title, venue, page number, and authorship, but not a public abstract.
+    description: Conference paper on decentralized manufacturing optimization. Publicly
+      available sources confirm the bibliographic record and authorship, but I could
+      not verify a public abstract.
+    summary_note: The summary above is title-based because the verified public sources
+      I found expose the title, venue, page number, and authorship, but not a public
+      abstract.
     highlight: Best Paper Award context
     theme_slugs:
     - operations-optimization
@@ -303,11 +312,12 @@ by_title:
     - label: Scholar profile
       url: https://scholar.google.com/citations?hl=en&user=VwCuh7MAAAAJ&view_op=list_works
     authors: Moustafa Abdelwanis, Adriana Gabor, and Andrei Sleptchenko
-    venue: 50th International Conference on Computers & Industrial Engineering (CIE50), p. 1147 (2023)
+    venue: 50th International Conference on Computers & Industrial Engineering (CIE50),
+      p. 1147 (2023)
   simulation-based-variable-neighborhood-search-for-optimizing-skill-assignments-and-priorities-in-service-queues:
-    description: Master's thesis developing simulation-based VNS frameworks for optimizing skill assignments
-      and priority rules in multi-skill service queues with inventory, with substantial improvements over
-      genetic algorithms.
+    description: Master's thesis developing simulation-based VNS frameworks for optimizing
+      skill assignments and priority rules in multi-skill service queues with inventory,
+      with substantial improvements over genetic algorithms.
     highlight: Master's thesis
     theme_slugs:
     - operations-optimization
