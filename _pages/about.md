@@ -16,7 +16,7 @@ redirect_from:
   <p class="hero-subtitle">{{ profile.homepage.hero_subtitle }}</p>
   <div class="hero-actions">
     <a class="btn btn--primary" href="/publications/">View Publications</a>
-    <a class="btn btn--inverse" href="/files/Moustafa_Abdelwanis_CV.pdf">Download CV</a>
+    <!-- <a class="btn btn--inverse" href="/files/Moustafa_Abdelwanis_CV.pdf">Download CV</a> -->
     <a class="btn btn--inverse" href="{{ profile.profiles.scholar_url }}">{{ profile.profiles.scholar_label }}</a>
     <a class="btn btn--inverse" href="mailto:moustafa.abdelwanis@ku.ac.ae">Email</a>
   </div>
