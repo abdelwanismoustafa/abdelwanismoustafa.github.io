@@ -1,0 +1,83 @@
+name: Sync publications and deploy Pages
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 3 * * *"
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install sync dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pyyaml
+
+      - name: Sync publications from ORCID
+        env:
+          ORCID_CLIENT_ID: ${{ secrets.ORCID_CLIENT_ID }}
+          ORCID_CLIENT_SECRET: ${{ secrets.ORCID_CLIENT_SECRET }}
+        run: python scripts/sync_publications.py
+
+      - name: Commit synced publication data
+        run: |
+          if git diff --quiet -- _data/publications.yml; then
+            echo "No publication sync changes to commit."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add _data/publications.yml
+            git commit -m "chore: sync publications from ORCID"
+            git push origin HEAD:${GITHUB_REF_NAME}
+          fi
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+        env:
+          JEKYLL_ENV: production
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./_site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
