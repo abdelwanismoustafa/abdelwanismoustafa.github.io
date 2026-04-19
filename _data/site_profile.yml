@@ -1,0 +1,29 @@
+name: "Moustafa Abdelwanis"
+orcid_id: "0000-0001-5034-2613"
+
+profiles:
+  scholar_url: "https://scholar.google.com/citations?hl=en&user=VwCuh7MAAAAJ&view_op=list_works"
+  scholar_label: "Google Scholar"
+  orcid_url: "https://orcid.org/0000-0001-5034-2613"
+  orcid_label: "ORCID"
+
+homepage:
+  hero_badge: "Engineering Systems and Management • Khalifa University"
+  hero_title: "Moustafa Abdelwanis"
+  hero_subtitle: "Ph.D. candidate researching operations management, AI in healthcare, human-AI interaction, simulation, and optimization, with a focus on safe and practically deployable decision support for healthcare and service systems."
+  selected_publications_limit: 4
+  featured_types:
+    - journal
+    - conference
+    - thesis
+
+scholar_metrics:
+  citations: 197
+  h_index: 4
+  i10_index: 3
+  last_checked: "2026-04-19"
+
+awards:
+  - title: "Best Paper Award, 50th International Conference on Computers and Industrial Engineering (CIE 50), 2023."
+  - title: "Best Paper Award, Graduate Student Research Competition (GSRC), American University in Sharjah, 2024."
+  - title: "Outstanding Graduate Student, Graduate Students Research Awards, Khalifa University, 2024."
