@@ -28,7 +28,7 @@ redirect_from:
   <p class="hero-subtitle">Ph.D. candidate researching operations management, AI in healthcare, human-AI interaction, simulation, and optimization, with a focus on safe and practically deployable decision support for healthcare and service systems.</p>
   <div class="hero-actions">
     <a class="btn btn--primary" href="/publications/">View Publications</a>
-    <a class="btn btn--inverse" href="/files/Moustafa_Abdelwanis_CV.pdf">Download CV</a>
+    <!-- <a class="btn btn--inverse" href="/files/Moustafa_Abdelwanis_CV.pdf">Download CV</a> -->
     <a class="btn btn--inverse" href="https://scholar.google.com/citations?hl=en&user=VwCuh7MAAAAJ&view_op=list_works">Google Scholar</a>
     <a class="btn btn--inverse" href="mailto:moustafa.abdelwanis@ku.ac.ae">Email</a>
   </div>
