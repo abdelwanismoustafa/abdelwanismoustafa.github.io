@@ -72,7 +72,7 @@ author_profile: true
     <a href="{{ pub_data.profiles.orcid_url }}">{{ pub_data.profiles.orcid_label }}</a>
   </div>
 
-  <p class="section-intro section-intro--wide">This page is manually curated so you retain full control over descriptions, grouping, and homepage features. Update <code>_data/publications.yml</code> when you publish a new paper.</p>
+  <p </p>
 
   <div class="pub-toolbar" role="group" aria-label="Publication filters">
     <div class="pub-filter-group">
