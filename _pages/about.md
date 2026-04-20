@@ -139,7 +139,7 @@ redirect_from:
 
 <section class="section-block">
   <h2 class="section-title">Selected publications</h2>
-  <p class="section-intro">These featured papers are manually curated from the publication records used on this site. Update <code>_data/publications.yml</code> when you want to change the homepage highlights.</p>
+  <!-- <p class="section-intro">These featured papers are manually curated from the publication records used on this site. Update <code>_data/publications.yml</code> when you want to change the homepage highlights.</p> -->
 
   <div class="publication-list">
     {% for item in featured %}
