@@ -71,7 +71,7 @@ author_profile: true
     <span class="profiles-separator">|</span>
     <a href="{{ pub_data.profiles.orcid_url }}">{{ pub_data.profiles.orcid_label }}</a>
   </div>
-
+<!--
   <p </p>
 <!--
   <div class="pub-toolbar" role="group" aria-label="Publication filters">
@@ -101,8 +101,8 @@ author_profile: true
       <label class="toolbar-label" for="pub-search">Search</label>
       <input id="pub-search" class="pub-search" type="search" placeholder="Search by title, venue, theme, method, or keyword" autocomplete="off" />
     </div>
-    -->
-  </div>
+    <!--
+    </div>
 
   <p class="pub-note-banner">{{ pub_data.analytics.note }}</p>
 
