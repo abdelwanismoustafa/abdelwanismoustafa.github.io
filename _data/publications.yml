@@ -7,9 +7,9 @@ analytics:
   journal_articles: 6
   conference_papers: 6
   theses: 1
-  note: Manually curated publication records for this site. Google Scholar currently indexes 12 works
-    on the public profile; this page lists 13 verified outputs because it also includes one 2024 CIE conference
-    paper found in public institutional sources.
+  # note: Manually curated publication records for this site. Google Scholar currently indexes 12 works
+    # on the public profile; this page lists 13 verified outputs because it also includes one 2024 CIE conference
+    # paper found in public institutional sources.
   last_checked: April 2026
 profiles:
   scholar_label: Google Scholar
