@@ -6,10 +6,14 @@ author_profile: true
 ---
 
 {% assign pub_data = site.data.publications %}
+{% assign profile = site.data.site_profile %}
 {% assign journals = pub_data.outputs | where: "type_slug", "journal" %}
 {% assign conferences = pub_data.outputs | where: "type_slug", "conference" %}
 {% assign theses = pub_data.outputs | where: "type_slug", "thesis" %}
-{% assign others = pub_data.outputs | where: "type_slug", "other" %}
+{% assign scholar = nil %}
+{% if profile and profile.scholar_metrics %}
+  {% assign scholar = profile.scholar_metrics %}
+{% endif %}
 
 <section class="page__hero--custom page__hero--compact">
   <div class="hero-badge">Research outputs • journals, conference papers, and thesis work</div>
@@ -37,9 +41,18 @@ author_profile: true
   </div>
   <div class="stat-card">
     <span class="stat-number">{{ pub_data.analytics.theses }}</span>
-    <div class="stat-label">Theses currently verified in public sources.</div>
+    <div class="stat-label">Thesis currently verified in public sources.</div>
   </div>
-  {% if pub_data.analytics.citations %}
+  {% if scholar %}
+  <div class="stat-card">
+    <span class="stat-number">{{ scholar.citations }}</span>
+    <div class="stat-label">Google Scholar citations ({{ scholar.last_checked }}).</div>
+  </div>
+  <div class="stat-card">
+    <span class="stat-number">h{{ scholar.h_index }}</span>
+    <div class="stat-label">Google Scholar h-index; i10-index {{ scholar.i10_index }}.</div>
+  </div>
+  {% elsif pub_data.analytics.citations %}
   <div class="stat-card">
     <span class="stat-number">{{ pub_data.analytics.citations }}</span>
     <div class="stat-label">Google Scholar citations ({{ pub_data.analytics.last_checked }}).</div>
@@ -59,7 +72,7 @@ author_profile: true
     <a href="{{ pub_data.profiles.orcid_url }}">{{ pub_data.profiles.orcid_label }}</a>
   </div>
 
-  <p class="section-intro section-intro--wide">This page is generated from your public ORCID record and enriched with available DOI metadata. New papers can flow into the site automatically after they appear on ORCID.</p>
+  <p class="section-intro section-intro--wide">This page is manually curated so you retain full control over descriptions, grouping, and homepage features. Update <code>_data/publications.yml</code> when you publish a new paper.</p>
 
   <div class="pub-toolbar" role="group" aria-label="Publication filters">
     <div class="pub-filter-group">
@@ -69,9 +82,6 @@ author_profile: true
         <button class="filter-chip" type="button" data-filter-group="type" data-filter-value="journal">Journal Articles</button>
         <button class="filter-chip" type="button" data-filter-group="type" data-filter-value="conference">Conference Papers</button>
         <button class="filter-chip" type="button" data-filter-group="type" data-filter-value="thesis">Thesis</button>
-        {% if pub_data.analytics.other_outputs > 0 %}
-        <button class="filter-chip" type="button" data-filter-group="type" data-filter-value="other">Other Outputs</button>
-        {% endif %}
       </div>
     </div>
 
@@ -95,66 +105,108 @@ author_profile: true
 
   <p class="pub-note-banner">{{ pub_data.analytics.note }}</p>
 
-  {% assign sections = "journal,conference,thesis,other" | split: "," %}
-  {% for section in sections %}
-    {% if section == 'journal' %}
-      {% assign records = journals %}
-      {% assign section_title = 'Journal articles' %}
-      {% assign section_intro = 'Peer-reviewed journal articles and review papers across healthcare AI, human factors, clinical decision support, and operations research.' %}
-    {% elsif section == 'conference' %}
-      {% assign records = conferences %}
-      {% assign section_title = 'Conference papers' %}
-      {% assign section_intro = 'Proceedings papers spanning simulation, healthcare resilience, AI adoption, metaheuristics, and clinical machine learning.' %}
-    {% elsif section == 'thesis' %}
-      {% assign records = theses %}
-      {% assign section_title = 'Thesis' %}
-      {% assign section_intro = 'Long-form degree research that anchors the optimization and simulation stream of the publication record.' %}
-    {% else %}
-      {% assign records = others %}
-      {% assign section_title = 'Other outputs' %}
-      {% assign section_intro = 'Outputs that do not fit cleanly into the journal, conference, or thesis categories.' %}
-    {% endif %}
+  <section class="section-block pub-section" data-section="journal">
+    <div class="section-heading-stack">
+      <h2 class="section-title">Journal articles</h2>
+      <p class="section-intro">Peer-reviewed journal articles and review papers across healthcare AI, human factors, clinical decision support, and operations research.</p>
+    </div>
+    <div class="publication-list publication-list--detailed">
+      {% for item in journals %}
+      {% capture search_blob %}{{ item.title }} {{ item.authors }} {{ item.venue }} {{ item.themes | join: ' ' }} {{ item.keywords | join: ' ' }}{% endcapture %}
+      <article class="pub-card pub-card--detailed pub-record" data-type="{{ item.type_slug }}" data-themes="{{ item.theme_slugs | join: ' ' }}" data-search="{{ search_blob | strip_newlines | downcase | escape }}">
+        <div class="pub-topline">
+          <div class="pub-meta">
+            <span class="pub-year">{{ item.year }}</span>
+            <span class="pub-venue">{{ item.type_label }}</span>
+            {% if item.citations %}<span class="pub-citations">{{ item.citations }} Scholar citations</span>{% endif %}
+          </div>
+          {% if item.highlight %}<span class="pub-highlight">{{ item.highlight }}</span>{% endif %}
+        </div>
+        <h3 class="pub-title">{{ item.title }}</h3>
+        <p class="pub-authors">{{ item.authors }}</p>
+        <p class="pub-venue-line">{{ item.venue }}</p>
+        <p class="pub-summary">{{ item.description }}</p>
+        {% if item.summary_note %}<p class="pub-summary-note">{{ item.summary_note }}</p>{% endif %}
+        <ul class="tag-list">
+          {% for theme in item.themes %}<li class="tag">{{ theme }}</li>{% endfor %}
+        </ul>
+        <div class="pub-links">
+          {% for link in item.links %}<a href="{{ link.url }}">{{ link.label }}</a>{% endfor %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
 
-    {% if records.size > 0 %}
-    <section class="section-block pub-section" data-section="{{ section }}">
-      <div class="section-heading-stack">
-        <h2 class="section-title">{{ section_title }}</h2>
-        <p class="section-intro">{{ section_intro }}</p>
-      </div>
-      <div class="publication-list publication-list--detailed">
-        {% for item in records %}
-        {% capture search_blob %}{{ item.title }} {{ item.authors }} {{ item.venue }} {{ item.themes | join: ' ' }} {{ item.keywords | join: ' ' }}{% endcapture %}
-        <article class="pub-card pub-card--detailed pub-record" data-type="{{ item.type_slug }}" data-themes="{{ item.theme_slugs | join: ' ' }}" data-search="{{ search_blob | strip_newlines | downcase | escape }}">
-          <div class="pub-topline">
-            <div class="pub-meta">
-              <span class="pub-year">{{ item.year }}</span>
-              <span class="pub-venue">{{ item.type_label }}</span>
-              {% if item.citations %}<span class="pub-citations">{{ item.citations }} Scholar citations</span>{% endif %}
-            </div>
-            {% if item.highlight %}<span class="pub-highlight">{{ item.highlight }}</span>{% endif %}
+  <section class="section-block pub-section" data-section="conference">
+    <div class="section-heading-stack">
+      <h2 class="section-title">Conference papers</h2>
+      <p class="section-intro">Proceedings papers spanning simulation, healthcare resilience, AI adoption, metaheuristics, and clinical machine learning.</p>
+    </div>
+    <div class="publication-list publication-list--detailed">
+      {% for item in conferences %}
+      {% capture search_blob %}{{ item.title }} {{ item.authors }} {{ item.venue }} {{ item.themes | join: ' ' }} {{ item.keywords | join: ' ' }}{% endcapture %}
+      <article class="pub-card pub-card--detailed pub-record" data-type="{{ item.type_slug }}" data-themes="{{ item.theme_slugs | join: ' ' }}" data-search="{{ search_blob | strip_newlines | downcase | escape }}">
+        <div class="pub-topline">
+          <div class="pub-meta">
+            <span class="pub-year">{{ item.year }}</span>
+            <span class="pub-venue">{{ item.type_label }}</span>
+            {% if item.citations %}<span class="pub-citations">{{ item.citations }} Scholar citations</span>{% endif %}
           </div>
-          <h3 class="pub-title">{{ item.title }}</h3>
-          <p class="pub-authors">{{ item.authors }}</p>
-          <p class="pub-venue-line">{{ item.venue }}</p>
-          <p class="pub-summary">{{ item.description }}</p>
-          {% if item.summary_note %}<p class="pub-summary-note">{{ item.summary_note }}</p>{% endif %}
-          <ul class="tag-list">
-            {% for theme in item.themes %}<li class="tag">{{ theme }}</li>{% endfor %}
-          </ul>
-          <div class="pub-links">
-            {% for link in item.links %}<a href="{{ link.url }}">{{ link.label }}</a>{% endfor %}
+          {% if item.highlight %}<span class="pub-highlight">{{ item.highlight }}</span>{% endif %}
+        </div>
+        <h3 class="pub-title">{{ item.title }}</h3>
+        <p class="pub-authors">{{ item.authors }}</p>
+        <p class="pub-venue-line">{{ item.venue }}</p>
+        <p class="pub-summary">{{ item.description }}</p>
+        {% if item.summary_note %}<p class="pub-summary-note">{{ item.summary_note }}</p>{% endif %}
+        <ul class="tag-list">
+          {% for theme in item.themes %}<li class="tag">{{ theme }}</li>{% endfor %}
+        </ul>
+        <div class="pub-links">
+          {% for link in item.links %}<a href="{{ link.url }}">{{ link.label }}</a>{% endfor %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="section-block pub-section" data-section="thesis">
+    <div class="section-heading-stack">
+      <h2 class="section-title">Thesis</h2>
+      <p class="section-intro">Long-form degree research that anchors the optimization and simulation stream of the publication record.</p>
+    </div>
+    <div class="publication-list publication-list--detailed">
+      {% for item in theses %}
+      {% capture search_blob %}{{ item.title }} {{ item.authors }} {{ item.venue }} {{ item.themes | join: ' ' }} {{ item.keywords | join: ' ' }}{% endcapture %}
+      <article class="pub-card pub-card--detailed pub-record" data-type="{{ item.type_slug }}" data-themes="{{ item.theme_slugs | join: ' ' }}" data-search="{{ search_blob | strip_newlines | downcase | escape }}">
+        <div class="pub-topline">
+          <div class="pub-meta">
+            <span class="pub-year">{{ item.year }}</span>
+            <span class="pub-venue">{{ item.type_label }}</span>
           </div>
-        </article>
-        {% endfor %}
-      </div>
-    </section>
-    {% endif %}
-  {% endfor %}
+          {% if item.highlight %}<span class="pub-highlight">{{ item.highlight }}</span>{% endif %}
+        </div>
+        <h3 class="pub-title">{{ item.title }}</h3>
+        <p class="pub-authors">{{ item.authors }}</p>
+        <p class="pub-venue-line">{{ item.venue }}</p>
+        <p class="pub-summary">{{ item.description }}</p>
+        {% if item.summary_note %}<p class="pub-summary-note">{{ item.summary_note }}</p>{% endif %}
+        <ul class="tag-list">
+          {% for theme in item.themes %}<li class="tag">{{ theme }}</li>{% endfor %}
+        </ul>
+        <div class="pub-links">
+          {% for link in item.links %}<a href="{{ link.url }}">{{ link.label }}</a>{% endfor %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
 
   <div class="pub-empty-state" hidden>
-    <h3>No publications match the current filters.</h3>
-    <p>Try clearing the search box or switching back to “All” filters.</p>
+    <strong>No publications match the current filters.</strong>
+    <span>Try clearing the search box or switching back to All Themes.</span>
   </div>
 </section>
 
-<script src="/assets/js/publications.js"></script>
+<script src="{{ '/assets/js/publications.js' | relative_url }}"></script>

@@ -9,15 +9,27 @@ redirect_from:
 
 {% assign pub_data = site.data.publications %}
 {% assign profile = site.data.site_profile %}
+{% assign featured = pub_data.selected_outputs %}
+{% if featured == nil or featured.size == 0 %}
+  {% assign featured = pub_data.outputs | slice: 0, 4 %}
+{% endif %}
+{% assign awards_count = 3 %}
+{% if profile and profile.awards %}
+  {% assign awards_count = profile.awards | size %}
+{% endif %}
+{% assign scholar = nil %}
+{% if profile and profile.scholar_metrics %}
+  {% assign scholar = profile.scholar_metrics %}
+{% endif %}
 
 <section class="page__hero--custom">
-  <div class="hero-badge">{{ profile.homepage.hero_badge }}</div>
-  <h1 class="hero-title">{{ profile.homepage.hero_title }}</h1>
-  <p class="hero-subtitle">{{ profile.homepage.hero_subtitle }}</p>
+  <div class="hero-badge">Engineering Systems and Management • Khalifa University</div>
+  <h1 class="hero-title">Moustafa Abdelwanis</h1>
+  <p class="hero-subtitle">Ph.D. candidate researching operations management, AI in healthcare, human-AI interaction, simulation, and optimization, with a focus on safe and practically deployable decision support for healthcare and service systems.</p>
   <div class="hero-actions">
     <a class="btn btn--primary" href="/publications/">View Publications</a>
-    <!-- <a class="btn btn--inverse" href="/files/Moustafa_Abdelwanis_CV.pdf">Download CV</a> -->
-    <a class="btn btn--inverse" href="{{ profile.profiles.scholar_url }}">{{ profile.profiles.scholar_label }}</a>
+    <a class="btn btn--inverse" href="/files/Moustafa_Abdelwanis_CV.pdf">Download CV</a>
+    <a class="btn btn--inverse" href="https://scholar.google.com/citations?hl=en&user=VwCuh7MAAAAJ&view_op=list_works">Google Scholar</a>
     <a class="btn btn--inverse" href="mailto:moustafa.abdelwanis@ku.ac.ae">Email</a>
   </div>
 </section>
@@ -26,26 +38,28 @@ redirect_from:
   <div class="stat-card">
     <span class="stat-number">{{ pub_data.analytics.listed_outputs }}</span>
     <div class="stat-title">Research outputs</div>
-    <div class="stat-label">{{ pub_data.analytics.journal_articles }} journal articles, {{ pub_data.analytics.conference_papers }} conference papers, and {{ pub_data.analytics.theses }} thesis currently listed on the site.</div>
+    <div class="stat-label">{{ pub_data.analytics.journal_articles }} journal articles, {{ pub_data.analytics.conference_papers }} conference papers, and {{ pub_data.analytics.theses }} thesis currently featured on the publications page.</div>
   </div>
   <div class="stat-card">
     <span class="stat-number">{{ pub_data.analytics.journal_articles }}</span>
     <div class="stat-title">Journal articles</div>
-    <div class="stat-label">Peer-reviewed journal work across healthcare AI, safety, optimization, and clinical analytics.</div>
+    <div class="stat-label">Recent work in Safety Science, Computers &amp; Operations Research, Computers in Biology and Medicine, Journal of Heuristics, and Scientific Reports.</div>
   </div>
   <div class="stat-card">
     <span class="stat-number">{{ pub_data.analytics.conference_papers }}</span>
     <div class="stat-title">Conference papers</div>
-    <div class="stat-label">Proceedings contributions across simulation, operations research, healthcare systems, and clinical ML.</div>
+    <div class="stat-label">Proceedings contributions across WSC, CIE, ICVNS, and Computing in Cardiology.</div>
   </div>
   <div class="stat-card">
-    <span class="stat-number">{{ profile.awards | size }}</span>
+    <span class="stat-number">{{ awards_count }}</span>
     <div class="stat-title">Awards and distinctions</div>
     <div class="stat-label">Including CIE 50 Best Paper, GSRC Best Paper, and Outstanding Graduate Student at Khalifa University.</div>
   </div>
 </section>
 
-{% if pub_data.analytics.citations %}
+{% if scholar %}
+<p class="stats-note">Current analytics shown on the site: {{ scholar.citations }} Google Scholar citations, h-index {{ scholar.h_index }}, and i10-index {{ scholar.i10_index }}.</p>
+{% elsif pub_data.analytics.citations %}
 <p class="stats-note">Current analytics shown on the site: {{ pub_data.analytics.citations }} Google Scholar citations, h-index {{ pub_data.analytics.h_index }}, and i10-index {{ pub_data.analytics.i10_index }}.</p>
 {% endif %}
 
@@ -109,9 +123,15 @@ redirect_from:
       <div class="card-label">Recognition</div>
       <h3>Awards and distinction</h3>
       <ul class="point-list">
-        {% for award in profile.awards %}
-        <li>{{ award.title }}</li>
-        {% endfor %}
+        {% if profile and profile.awards %}
+          {% for award in profile.awards %}
+          <li>{{ award.title }}</li>
+          {% endfor %}
+        {% else %}
+          <li>Best Paper Award, 50th International Conference on Computers and Industrial Engineering (CIE 50), 2023.</li>
+          <li>Best Paper Award, Graduate Student Research Competition (GSRC), American University in Sharjah, 2024.</li>
+          <li>Outstanding Graduate Student, Graduate Students Research Awards, Khalifa University, 2024.</li>
+        {% endif %}
       </ul>
     </article>
   </div>
@@ -119,10 +139,10 @@ redirect_from:
 
 <section class="section-block">
   <h2 class="section-title">Selected publications</h2>
-  <p class="section-intro">This section is populated automatically from the ORCID sync pipeline. When a new paper appears on your public ORCID record, the site can refresh these featured entries and the publication counts automatically.</p>
+  <p class="section-intro">These featured papers are manually curated from the publication records used on this site. Update <code>_data/publications.yml</code> when you want to change the homepage highlights.</p>
 
   <div class="publication-list">
-    {% for item in pub_data.selected_outputs %}
+    {% for item in featured %}
     <article class="pub-card">
       <div class="pub-meta">
         <span class="pub-year">{{ item.year }}</span>
@@ -148,6 +168,6 @@ redirect_from:
   <div class="contact-actions">
     <a class="btn btn--primary" href="/publications/">Publications</a>
     <a class="btn btn--inverse" href="mailto:moustafa.abdelwanis@ku.ac.ae">Contact</a>
-    <a class="btn btn--inverse" href="{{ profile.profiles.scholar_url }}">Scholar profile</a>
+    <a class="btn btn--inverse" href="https://scholar.google.com/citations?hl=en&user=VwCuh7MAAAAJ&view_op=list_works">Scholar profile</a>
   </div>
 </section>
