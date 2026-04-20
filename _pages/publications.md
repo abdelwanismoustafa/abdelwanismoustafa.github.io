@@ -71,38 +71,6 @@ author_profile: true
     <span class="profiles-separator">|</span>
     <a href="{{ pub_data.profiles.orcid_url }}">{{ pub_data.profiles.orcid_label }}</a>
   </div>
-<!--
-  <p </p>
-<!--
-  <div class="pub-toolbar" role="group" aria-label="Publication filters">
-    <div class="pub-filter-group">
-      <span class="toolbar-label">Type</span>
-      <div class="pub-filter-row">
-        <button class="filter-chip is-active" type="button" data-filter-group="type" data-filter-value="all">All</button>
-        <button class="filter-chip" type="button" data-filter-group="type" data-filter-value="journal">Journal Articles</button>
-        <button class="filter-chip" type="button" data-filter-group="type" data-filter-value="conference">Conference Papers</button>
-        <button class="filter-chip" type="button" data-filter-group="type" data-filter-value="thesis">Thesis</button>
-      </div>
-    </div>
-
-    <div class="pub-filter-group">
-      <span class="toolbar-label">Theme</span>
-      <div class="pub-filter-row">
-        <button class="filter-chip is-active" type="button" data-filter-group="theme" data-filter-value="all">All Themes</button>
-        <button class="filter-chip" type="button" data-filter-group="theme" data-filter-value="ai-healthcare">AI in Healthcare</button>
-        <button class="filter-chip" type="button" data-filter-group="theme" data-filter-value="human-ai">Human-AI Interaction</button>
-        <button class="filter-chip" type="button" data-filter-group="theme" data-filter-value="operations-optimization">Operations &amp; Optimization</button>
-        <button class="filter-chip" type="button" data-filter-group="theme" data-filter-value="clinical-analytics">Clinical Analytics</button>
-        <button class="filter-chip" type="button" data-filter-group="theme" data-filter-value="reviews">Reviews</button>
-      </div>
-    </div>
-
-    <div class="pub-search-block">
-      <label class="toolbar-label" for="pub-search">Search</label>
-      <input id="pub-search" class="pub-search" type="search" placeholder="Search by title, venue, theme, method, or keyword" autocomplete="off" />
-    </div>
-    <!--
-    </div>
 
   <p class="pub-note-banner">{{ pub_data.analytics.note }}</p>
 
