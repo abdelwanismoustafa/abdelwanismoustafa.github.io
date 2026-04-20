@@ -15,198 +15,220 @@ author_profile: true
   {% assign scholar = profile.scholar_metrics %}
 {% endif %}
 
-<section class="page__hero--custom page__hero--compact">
-  <div class="hero-badge">Research outputs • journals, conference papers, and thesis work</div>
-  <h1 class="hero-title">Publications</h1>
-  <p class="hero-subtitle">A structured, searchable overview of my research across AI in healthcare, human-AI interaction, service-system optimization, simulation, and clinical analytics.</p>
-  <div class="hero-actions">
-    <a class="btn btn--primary" href="{{ pub_data.profiles.scholar_url }}">{{ pub_data.profiles.scholar_label }}</a>
-    <a class="btn btn--inverse" href="{{ pub_data.profiles.orcid_url }}">{{ pub_data.profiles.orcid_label }}</a>
-    <a class="btn btn--inverse" href="/files/Moustafa_Abdelwanis_CV.pdf">Download CV</a>
-  </div>
-</section>
+Research outputs • journals, conference papers, and thesis work
+# Publications
 
-<section class="quick-stats quick-stats--publications">
-  <div class="stat-card">
-    <span class="stat-number">{{ pub_data.analytics.listed_outputs }}</span>
-    <div class="stat-label">Verified outputs listed on this page.</div>
+A structured, searchable overview of my research across AI in healthcare, human-AI interaction, service-system optimization, simulation, and clinical analytics.
+
+<div class="pub-summary-links">
+  <a href="{{ pub_data.profiles.scholar_url }}">{{ pub_data.profiles.scholar_label }}</a>
+  <a href="{{ pub_data.profiles.orcid_url }}">{{ pub_data.profiles.orcid_label }}</a>
+  <a href="{{ '/files/Moustafa_Abdelwanis_CV.pdf' | relative_url }}">Download CV</a>
+</div>
+
+<div class="pub-metrics-grid">
+  <div class="pub-metric-card">
+    <div class="pub-metric-value">{{ pub_data.analytics.listed_outputs }}</div>
+    <div class="pub-metric-label">Verified outputs listed on this page.</div>
   </div>
-  <div class="stat-card">
-    <span class="stat-number">{{ pub_data.analytics.journal_articles }}</span>
-    <div class="stat-label">Journal articles and review papers.</div>
+  <div class="pub-metric-card">
+    <div class="pub-metric-value">{{ pub_data.analytics.journal_articles }}</div>
+    <div class="pub-metric-label">Journal articles and review papers.</div>
   </div>
-  <div class="stat-card">
-    <span class="stat-number">{{ pub_data.analytics.conference_papers }}</span>
-    <div class="stat-label">Conference papers and proceedings contributions.</div>
+  <div class="pub-metric-card">
+    <div class="pub-metric-value">{{ pub_data.analytics.conference_papers }}</div>
+    <div class="pub-metric-label">Conference papers and proceedings contributions.</div>
   </div>
-  <div class="stat-card">
-    <span class="stat-number">{{ pub_data.analytics.theses }}</span>
-    <div class="stat-label">Thesis currently verified in public sources.</div>
+  <div class="pub-metric-card">
+    <div class="pub-metric-value">{{ pub_data.analytics.theses }}</div>
+    <div class="pub-metric-label">Thesis currently verified in public sources.</div>
   </div>
   {% if scholar %}
-  <div class="stat-card">
-    <span class="stat-number">{{ scholar.citations }}</span>
-    <div class="stat-label">Google Scholar citations ({{ scholar.last_checked }}).</div>
+  <div class="pub-metric-card">
+    <div class="pub-metric-value">{{ scholar.citations }}</div>
+    <div class="pub-metric-label">Google Scholar citations ({{ scholar.last_checked }}).</div>
   </div>
-  <div class="stat-card">
-    <span class="stat-number">h{{ scholar.h_index }}</span>
-    <div class="stat-label">Google Scholar h-index; i10-index {{ scholar.i10_index }}.</div>
+  <div class="pub-metric-card">
+    <div class="pub-metric-value">h{{ scholar.h_index }}</div>
+    <div class="pub-metric-label">Google Scholar h-index; i10-index {{ scholar.i10_index }}.</div>
   </div>
   {% elsif pub_data.analytics.citations %}
-  <div class="stat-card">
-    <span class="stat-number">{{ pub_data.analytics.citations }}</span>
-    <div class="stat-label">Google Scholar citations ({{ pub_data.analytics.last_checked }}).</div>
+  <div class="pub-metric-card">
+    <div class="pub-metric-value">{{ pub_data.analytics.citations }}</div>
+    <div class="pub-metric-label">Google Scholar citations ({{ pub_data.analytics.last_checked }}).</div>
   </div>
-  <div class="stat-card">
-    <span class="stat-number">h{{ pub_data.analytics.h_index }}</span>
-    <div class="stat-label">Google Scholar h-index; i10-index {{ pub_data.analytics.i10_index }}.</div>
+  <div class="pub-metric-card">
+    <div class="pub-metric-value">h{{ pub_data.analytics.h_index }}</div>
+    <div class="pub-metric-label">Google Scholar h-index; i10-index {{ pub_data.analytics.i10_index }}.</div>
   </div>
   {% endif %}
-</section>
+</div>
 
-<section class="section-block pub-browser">
-  <div class="profiles-line">
-    Academic profiles:
-    <a href="{{ pub_data.profiles.scholar_url }}">{{ pub_data.profiles.scholar_label }}</a>
-    <span class="profiles-separator">|</span>
-    <a href="{{ pub_data.profiles.orcid_url }}">{{ pub_data.profiles.orcid_label }}</a>
-  </div>
+<p>Academic profiles: <a href="{{ pub_data.profiles.scholar_url }}">{{ pub_data.profiles.scholar_label }}</a> | <a href="{{ pub_data.profiles.orcid_url }}">{{ pub_data.profiles.orcid_label }}</a></p>
 
-  <p class="section-intro section-intro--wide">This page is manually curated so you retain full control over descriptions, grouping, and homepage features. Update <code>_data/publications.yml</code> when you publish a new paper.</p>
+<p>{{ pub_data.analytics.note }}</p>
 
-  <div class="pub-toolbar" role="group" aria-label="Publication filters">
-    <div class="pub-filter-group">
-      <span class="toolbar-label">Type</span>
-      <div class="pub-filter-row">
-        <button class="filter-chip is-active" type="button" data-filter-group="type" data-filter-value="all">All</button>
-        <button class="filter-chip" type="button" data-filter-group="type" data-filter-value="journal">Journal Articles</button>
-        <button class="filter-chip" type="button" data-filter-group="type" data-filter-value="conference">Conference Papers</button>
-        <button class="filter-chip" type="button" data-filter-group="type" data-filter-value="thesis">Thesis</button>
+<div class="pub-browser">
+  <div class="pub-filters">
+    <div class="pub-filter-block">
+      <div class="pub-filter-label">Type</div>
+      <div class="pub-filter-chips">
+        <button type="button" class="filter-chip is-active" data-filter-group="type" data-filter-value="all">All</button>
+        <button type="button" class="filter-chip" data-filter-group="type" data-filter-value="journal">Journal Articles</button>
+        <button type="button" class="filter-chip" data-filter-group="type" data-filter-value="conference">Conference Papers</button>
+        <button type="button" class="filter-chip" data-filter-group="type" data-filter-value="thesis">Thesis</button>
       </div>
     </div>
 
-    <div class="pub-filter-group">
-      <span class="toolbar-label">Theme</span>
-      <div class="pub-filter-row">
-        <button class="filter-chip is-active" type="button" data-filter-group="theme" data-filter-value="all">All Themes</button>
-        <button class="filter-chip" type="button" data-filter-group="theme" data-filter-value="ai-healthcare">AI in Healthcare</button>
-        <button class="filter-chip" type="button" data-filter-group="theme" data-filter-value="human-ai">Human-AI Interaction</button>
-        <button class="filter-chip" type="button" data-filter-group="theme" data-filter-value="operations-optimization">Operations &amp; Optimization</button>
-        <button class="filter-chip" type="button" data-filter-group="theme" data-filter-value="clinical-analytics">Clinical Analytics</button>
-        <button class="filter-chip" type="button" data-filter-group="theme" data-filter-value="reviews">Reviews</button>
+    <div class="pub-filter-block">
+      <div class="pub-filter-label">Theme</div>
+      <div class="pub-filter-chips">
+        <button type="button" class="filter-chip is-active" data-filter-group="theme" data-filter-value="all">All Themes</button>
+        <button type="button" class="filter-chip" data-filter-group="theme" data-filter-value="ai-healthcare">AI in Healthcare</button>
+        <button type="button" class="filter-chip" data-filter-group="theme" data-filter-value="human-ai">Human-AI Interaction</button>
+        <button type="button" class="filter-chip" data-filter-group="theme" data-filter-value="operations-optimization">Operations &amp; Optimization</button>
+        <button type="button" class="filter-chip" data-filter-group="theme" data-filter-value="clinical-analytics">Clinical Analytics</button>
+        <button type="button" class="filter-chip" data-filter-group="theme" data-filter-value="reviews">Reviews</button>
       </div>
     </div>
 
-    <div class="pub-search-block">
-      <label class="toolbar-label" for="pub-search">Search</label>
-      <input id="pub-search" class="pub-search" type="search" placeholder="Search by title, venue, theme, method, or keyword" autocomplete="off" />
+    <div class="pub-filter-block">
+      <label class="pub-filter-label" for="pub-search">Search</label>
+      <input id="pub-search" type="search" placeholder="Search title, venue, authors, keywords, or themes" />
     </div>
   </div>
 
-  <p class="pub-note-banner">{{ pub_data.analytics.note }}</p>
+  <section class="pub-section" data-section="journal">
+    <h2>Journal articles</h2>
+    <p>Peer-reviewed journal articles and review papers across healthcare AI, human factors, clinical decision support, and operations research.</p>
 
-  <section class="section-block pub-section" data-section="journal">
-    <div class="section-heading-stack">
-      <h2 class="section-title">Journal articles</h2>
-      <p class="section-intro">Peer-reviewed journal articles and review papers across healthcare AI, human factors, clinical decision support, and operations research.</p>
-    </div>
-    <div class="publication-list publication-list--detailed">
-      {% for item in journals %}
+    {% for item in journals %}
       {% capture search_blob %}{{ item.title }} {{ item.authors }} {{ item.venue }} {{ item.themes | join: ' ' }} {{ item.keywords | join: ' ' }}{% endcapture %}
-      <article class="pub-card pub-card--detailed pub-record" data-type="{{ item.type_slug }}" data-themes="{{ item.theme_slugs | join: ' ' }}" data-search="{{ search_blob | strip_newlines | downcase | escape }}">
-        <div class="pub-topline">
-          <div class="pub-meta">
-            <span class="pub-year">{{ item.year }}</span>
-            <span class="pub-venue">{{ item.type_label }}</span>
-            {% if item.citations %}<span class="pub-citations">{{ item.citations }} Scholar citations</span>{% endif %}
-          </div>
-          {% if item.highlight %}<span class="pub-highlight">{{ item.highlight }}</span>{% endif %}
+      <article
+        class="pub-record"
+        data-type="{{ item.type_slug }}"
+        data-themes="{{ item.theme_slugs | join: ' ' }}"
+        data-search="{{ search_blob | strip | strip_newlines | replace: '"', '&quot;' | downcase }}">
+        <div class="pub-record-meta">
+          <span>{{ item.year }}</span>
+          <span>{{ item.type_label }}</span>
+          {% if item.citations %}<span>{{ item.citations }} Scholar citations</span>{% endif %}
         </div>
-        <h3 class="pub-title">{{ item.title }}</h3>
-        <p class="pub-authors">{{ item.authors }}</p>
-        <p class="pub-venue-line">{{ item.venue }}</p>
-        <p class="pub-summary">{{ item.description }}</p>
-        {% if item.summary_note %}<p class="pub-summary-note">{{ item.summary_note }}</p>{% endif %}
-        <ul class="tag-list">
-          {% for theme in item.themes %}<li class="tag">{{ theme }}</li>{% endfor %}
+
+        {% if item.highlight %}<div class="pub-record-highlight">{{ item.highlight }}</div>{% endif %}
+        <h3>{{ item.title }}</h3>
+        <p class="pub-record-authors">{{ item.authors }}</p>
+        <p class="pub-record-venue">{{ item.venue }}</p>
+        <p>{{ item.description }}</p>
+        {% if item.summary_note %}<p class="pub-record-note">{{ item.summary_note }}</p>{% endif %}
+
+        {% if item.themes and item.themes.size > 0 %}
+        <ul class="pub-tags">
+          {% for theme in item.themes %}
+          <li>{{ theme }}</li>
+          {% endfor %}
         </ul>
-        <div class="pub-links">
-          {% for link in item.links %}<a href="{{ link.url }}">{{ link.label }}</a>{% endfor %}
-        </div>
+        {% endif %}
+
+        {% if item.links and item.links.size > 0 %}
+        <p class="pub-record-links">
+          {% for link in item.links %}
+            <a href="{{ link.url }}">{{ link.label }}</a>{% unless forloop.last %} {% endunless %}
+          {% endfor %}
+        </p>
+        {% endif %}
       </article>
-      {% endfor %}
-    </div>
+    {% endfor %}
   </section>
 
-  <section class="section-block pub-section" data-section="conference">
-    <div class="section-heading-stack">
-      <h2 class="section-title">Conference papers</h2>
-      <p class="section-intro">Proceedings papers spanning simulation, healthcare resilience, AI adoption, metaheuristics, and clinical machine learning.</p>
-    </div>
-    <div class="publication-list publication-list--detailed">
-      {% for item in conferences %}
+  <section class="pub-section" data-section="conference">
+    <h2>Conference papers</h2>
+    <p>Proceedings papers spanning simulation, healthcare resilience, AI adoption, metaheuristics, and clinical machine learning.</p>
+
+    {% for item in conferences %}
       {% capture search_blob %}{{ item.title }} {{ item.authors }} {{ item.venue }} {{ item.themes | join: ' ' }} {{ item.keywords | join: ' ' }}{% endcapture %}
-      <article class="pub-card pub-card--detailed pub-record" data-type="{{ item.type_slug }}" data-themes="{{ item.theme_slugs | join: ' ' }}" data-search="{{ search_blob | strip_newlines | downcase | escape }}">
-        <div class="pub-topline">
-          <div class="pub-meta">
-            <span class="pub-year">{{ item.year }}</span>
-            <span class="pub-venue">{{ item.type_label }}</span>
-            {% if item.citations %}<span class="pub-citations">{{ item.citations }} Scholar citations</span>{% endif %}
-          </div>
-          {% if item.highlight %}<span class="pub-highlight">{{ item.highlight }}</span>{% endif %}
+      <article
+        class="pub-record"
+        data-type="{{ item.type_slug }}"
+        data-themes="{{ item.theme_slugs | join: ' ' }}"
+        data-search="{{ search_blob | strip | strip_newlines | replace: '"', '&quot;' | downcase }}">
+        <div class="pub-record-meta">
+          <span>{{ item.year }}</span>
+          <span>{{ item.type_label }}</span>
+          {% if item.citations %}<span>{{ item.citations }} Scholar citations</span>{% endif %}
         </div>
-        <h3 class="pub-title">{{ item.title }}</h3>
-        <p class="pub-authors">{{ item.authors }}</p>
-        <p class="pub-venue-line">{{ item.venue }}</p>
-        <p class="pub-summary">{{ item.description }}</p>
-        {% if item.summary_note %}<p class="pub-summary-note">{{ item.summary_note }}</p>{% endif %}
-        <ul class="tag-list">
-          {% for theme in item.themes %}<li class="tag">{{ theme }}</li>{% endfor %}
+
+        {% if item.highlight %}<div class="pub-record-highlight">{{ item.highlight }}</div>{% endif %}
+        <h3>{{ item.title }}</h3>
+        <p class="pub-record-authors">{{ item.authors }}</p>
+        <p class="pub-record-venue">{{ item.venue }}</p>
+        <p>{{ item.description }}</p>
+        {% if item.summary_note %}<p class="pub-record-note">{{ item.summary_note }}</p>{% endif %}
+
+        {% if item.themes and item.themes.size > 0 %}
+        <ul class="pub-tags">
+          {% for theme in item.themes %}
+          <li>{{ theme }}</li>
+          {% endfor %}
         </ul>
-        <div class="pub-links">
-          {% for link in item.links %}<a href="{{ link.url }}">{{ link.label }}</a>{% endfor %}
-        </div>
+        {% endif %}
+
+        {% if item.links and item.links.size > 0 %}
+        <p class="pub-record-links">
+          {% for link in item.links %}
+            <a href="{{ link.url }}">{{ link.label }}</a>{% unless forloop.last %} {% endunless %}
+          {% endfor %}
+        </p>
+        {% endif %}
       </article>
-      {% endfor %}
-    </div>
+    {% endfor %}
   </section>
 
-  <section class="section-block pub-section" data-section="thesis">
-    <div class="section-heading-stack">
-      <h2 class="section-title">Thesis</h2>
-      <p class="section-intro">Long-form degree research that anchors the optimization and simulation stream of the publication record.</p>
-    </div>
-    <div class="publication-list publication-list--detailed">
-      {% for item in theses %}
+  <section class="pub-section" data-section="thesis">
+    <h2>Thesis</h2>
+    <p>Long-form degree research that anchors the optimization and simulation stream of the publication record.</p>
+
+    {% for item in theses %}
       {% capture search_blob %}{{ item.title }} {{ item.authors }} {{ item.venue }} {{ item.themes | join: ' ' }} {{ item.keywords | join: ' ' }}{% endcapture %}
-      <article class="pub-card pub-card--detailed pub-record" data-type="{{ item.type_slug }}" data-themes="{{ item.theme_slugs | join: ' ' }}" data-search="{{ search_blob | strip_newlines | downcase | escape }}">
-        <div class="pub-topline">
-          <div class="pub-meta">
-            <span class="pub-year">{{ item.year }}</span>
-            <span class="pub-venue">{{ item.type_label }}</span>
-          </div>
-          {% if item.highlight %}<span class="pub-highlight">{{ item.highlight }}</span>{% endif %}
+      <article
+        class="pub-record"
+        data-type="{{ item.type_slug }}"
+        data-themes="{{ item.theme_slugs | join: ' ' }}"
+        data-search="{{ search_blob | strip | strip_newlines | replace: '"', '&quot;' | downcase }}">
+        <div class="pub-record-meta">
+          <span>{{ item.year }}</span>
+          <span>{{ item.type_label }}</span>
         </div>
-        <h3 class="pub-title">{{ item.title }}</h3>
-        <p class="pub-authors">{{ item.authors }}</p>
-        <p class="pub-venue-line">{{ item.venue }}</p>
-        <p class="pub-summary">{{ item.description }}</p>
-        {% if item.summary_note %}<p class="pub-summary-note">{{ item.summary_note }}</p>{% endif %}
-        <ul class="tag-list">
-          {% for theme in item.themes %}<li class="tag">{{ theme }}</li>{% endfor %}
+
+        {% if item.highlight %}<div class="pub-record-highlight">{{ item.highlight }}</div>{% endif %}
+        <h3>{{ item.title }}</h3>
+        <p class="pub-record-authors">{{ item.authors }}</p>
+        <p class="pub-record-venue">{{ item.venue }}</p>
+        <p>{{ item.description }}</p>
+        {% if item.summary_note %}<p class="pub-record-note">{{ item.summary_note }}</p>{% endif %}
+
+        {% if item.themes and item.themes.size > 0 %}
+        <ul class="pub-tags">
+          {% for theme in item.themes %}
+          <li>{{ theme }}</li>
+          {% endfor %}
         </ul>
-        <div class="pub-links">
-          {% for link in item.links %}<a href="{{ link.url }}">{{ link.label }}</a>{% endfor %}
-        </div>
+        {% endif %}
+
+        {% if item.links and item.links.size > 0 %}
+        <p class="pub-record-links">
+          {% for link in item.links %}
+            <a href="{{ link.url }}">{{ link.label }}</a>{% unless forloop.last %} {% endunless %}
+          {% endfor %}
+        </p>
+        {% endif %}
       </article>
-      {% endfor %}
-    </div>
+    {% endfor %}
   </section>
 
   <div class="pub-empty-state" hidden>
-    <strong>No publications match the current filters.</strong>
-    <span>Try clearing the search box or switching back to All Themes.</span>
+    No publications match the current filters. Try clearing the search box or switching back to All Themes.
   </div>
-</section>
+</div>
 
 <script src="{{ '/assets/js/publications.js' | relative_url }}"></script>
