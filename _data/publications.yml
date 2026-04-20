@@ -262,7 +262,7 @@ outputs:
     Omar
   description: Conference paper on organizational, technological, and human barriers to AI adoption in
     health systems, including automation-bias concerns and implementation challenges.
-  highlight: Additional verified output
+  highlight: CIE51
   theme_slugs:
   - ai-healthcare
   - human-ai
