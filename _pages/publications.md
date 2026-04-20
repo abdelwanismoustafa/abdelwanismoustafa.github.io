@@ -73,7 +73,7 @@ author_profile: true
   </div>
 
   <p </p>
-
+<!--
   <div class="pub-toolbar" role="group" aria-label="Publication filters">
     <div class="pub-filter-group">
       <span class="toolbar-label">Type</span>
@@ -101,6 +101,7 @@ author_profile: true
       <label class="toolbar-label" for="pub-search">Search</label>
       <input id="pub-search" class="pub-search" type="search" placeholder="Search by title, venue, theme, method, or keyword" autocomplete="off" />
     </div>
+    -->
   </div>
 
   <p class="pub-note-banner">{{ pub_data.analytics.note }}</p>
