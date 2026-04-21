@@ -19,13 +19,13 @@ Representative topics:
 
 ## 2. Simulation-based optimization
 
-Utilizing simulation-based optimization approaches for optimzing skill-assignments in service operations.
+Developing computationally efficient simulation-based optimization approaches for optimzing skill-assignments in service operations.
 
 Representative topics:
 - Multi-skill, Multi-server Queues
-- Variable neighborhood search
 - Skill assignment and cross-training
 - Simulation for healthcare and operations systems
+- Variable neighborhood search
 
 ## 3. Organ Transplantation
 
