@@ -87,7 +87,6 @@ author_profile: true
           <div class="pub-meta">
             <span class="pub-year">{{ item.year }}</span>
             <span class="pub-venue">{{ item.type_label }}</span>
-            {% if item.citations %}<span class="pub-citations">{{ item.citations }} Scholar citations</span>{% endif %}
           </div>
           {% if item.highlight %}<span class="pub-highlight">{{ item.highlight }}</span>{% endif %}
         </div>
@@ -120,7 +119,6 @@ author_profile: true
           <div class="pub-meta">
             <span class="pub-year">{{ item.year }}</span>
             <span class="pub-venue">{{ item.type_label }}</span>
-            {% if item.citations %}<span class="pub-citations">{{ item.citations }} Scholar citations</span>{% endif %}
           </div>
           {% if item.highlight %}<span class="pub-highlight">{{ item.highlight }}</span>{% endif %}
         </div>
