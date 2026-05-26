@@ -1,11 +1,11 @@
 ---
 layout: single
-title: "Awards"
+title: "Awards and Recognition"
 permalink: /awards/
 author_profile: true
 ---
 
-## Awards and Recognition
+## Awards 
 
 - **Best Paper Award**, 50th International Conference on Computers and Industrial Engineering (CIE 50), 2023.
 - **Best Paper Award**, Graduate Student Research Competition (GSRC), American University in Sharjah, 2024.
