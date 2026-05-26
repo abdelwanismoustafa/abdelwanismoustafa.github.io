@@ -152,7 +152,7 @@ outputs:
   description: Bowtie-based analysis of automation bias in AI-driven clinical decision support, mapping
     causes, consequences, and mitigation measures across design and post-deployment stages.
   citations: 136
-  highlight: Most cited
+  highlight: Human-AI Interaction
   theme_slugs:
   - ai-healthcare
   - human-ai
