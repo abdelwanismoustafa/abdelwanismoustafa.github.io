@@ -169,8 +169,8 @@ outputs:
   links:
   - label: DOI
     url: https://doi.org/10.1016/j.jnlssr.2024.06.001
-  - label: Record
-    url: https://nchr.elsevierpure.com/en/publications/exploring-the-risks-of-automation-bias-in-healthcare-artificial-i/
+  - label: Journal page
+    url: https://www.sciencedirect.com/science/article/pii/S2666449624000410?via%3Dihub
 - title: Detecting depression severity using weighted random forest and oxidative stress biomarkers
   year: 2024
   type_slug: journal
