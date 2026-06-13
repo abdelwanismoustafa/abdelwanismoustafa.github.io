@@ -1,16 +1,16 @@
 analytics:
-  listed_outputs: 13
+  listed_outputs: 14
   scholar_indexed_works: 12
   citations: 200
   h_index: 4
   i10_index: 3
-  journal_articles: 6
+  journal_articles: 7
   conference_papers: 6
   theses: 1
-  # note: Manually curated publication records for this site. Google Scholar currently indexes 12 works
-    # on the public profile; this page lists 13 verified outputs because it also includes one 2024 CIE conference
-    # paper found in public institutional sources.
-  last_checked: April 2026
+  note: Manually curated publication records for this site. Google Scholar currently indexes 12 works
+    on the public profile; this page lists 13 verified outputs because it also includes one 2024 CIE conference
+    paper found in public institutional sources.
+  last_checked: June 2026
 profiles:
   scholar_label: Google Scholar
   scholar_url: https://scholar.google.com/citations?hl=en&user=VwCuh7MAAAAJ&view_op=list_works
@@ -50,6 +50,34 @@ outputs:
     url: https://doi.org/10.1016/j.ssci.2025.107028
   - label: Journal page
     url: https://www.sciencedirect.com/science/article/pii/S092575352500253X
+- &id006
+  title: 'A participatory systems approach for patient safety: Mapping practitioners'' insights in medication journey improvement'
+  year: 2026
+  type_slug: journal
+  type_label: Journal article
+  venue: Safety Science, article 107300 (2026)
+  authors: Moustafa Abdelwanis, Khaled Toffaha, Michael A. Kortt, and Mecit Can Emre Simsekler
+  description: Safety Science article on patient safety improvement that uses a participatory systems approach to map practitioners' insights across the medication journey.
+  summary_note: The description above is intentionally conservative because the sources I could verify publicly expose the title, journal, DOI, and authorship, but not a public abstract.
+  highlight: Patient safety
+  theme_slugs:
+  - patient-safety
+  - systems-approach
+  themes:
+  - Patient safety
+  - Medication safety
+  - Systems approach
+  - Healthcare improvement
+  keywords:
+  - patient safety
+  - medication journey
+  - participatory systems approach
+  - healthcare improvement
+  links:
+  - label: DOI
+    url: https://doi.org/10.1016/j.ssci.2026.107300
+  - label: Journal page
+    url: https://www.sciencedirect.com/science/article/pii/S0925753526001918
 - title: 'Variable neighborhood search for healthcare providers rostering: a comprehensive review and
     future research agenda'
   year: 2026
@@ -152,7 +180,7 @@ outputs:
   description: Bowtie-based analysis of automation bias in AI-driven clinical decision support, mapping
     causes, consequences, and mitigation measures across design and post-deployment stages.
   citations: 136
-  highlight: Human-AI Interaction
+  highlight: Most cited
   theme_slugs:
   - ai-healthcare
   - human-ai
@@ -169,8 +197,8 @@ outputs:
   links:
   - label: DOI
     url: https://doi.org/10.1016/j.jnlssr.2024.06.001
-  - label: Journal page
-    url: https://www.sciencedirect.com/science/article/pii/S2666449624000410?via%3Dihub
+  - label: Record
+    url: https://nchr.elsevierpure.com/en/publications/exploring-the-risks-of-automation-bias-in-healthcare-artificial-i/
 - title: Detecting depression severity using weighted random forest and oxidative stress biomarkers
   year: 2024
   type_slug: journal
@@ -262,7 +290,7 @@ outputs:
     Omar
   description: Conference paper on organizational, technological, and human barriers to AI adoption in
     health systems, including automation-bias concerns and implementation challenges.
-  highlight: CIE51
+  highlight: Additional verified output
   theme_slugs:
   - ai-healthcare
   - human-ai
