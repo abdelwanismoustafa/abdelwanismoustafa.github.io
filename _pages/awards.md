@@ -20,5 +20,7 @@ author_profile: true
 ## Peer-Reviewer
 
 - Computers & industrial engineering
+- Healthcare Analytics
 - Computers in human behavior reports
 - Current research in translational medicine
+- Internet Interventions
