@@ -57,8 +57,8 @@ outputs:
   type_label: Journal article
   venue: Safety Science, article 107300 (2026)
   authors: Moustafa Abdelwanis, Khaled Toffaha, Michael A. Kortt, and Mecit Can Emre Simsekler
-  description: Safety Science article on patient safety improvement that uses a participatory systems approach to map practitioners' insights across the medication journey.
-  summary_note: The description above is intentionally conservative because the sources I could verify publicly expose the title, journal, DOI, and authorship, but not a public abstract.
+  description: Patient safety framework that uses data from a participatory workshop to map practitioners' prespectives to generate system-level insights.
+  # summary_note: The description above is intentionally conservative because the sources I could verify publicly expose the title, journal, DOI, and authorship, but not a public abstract.
   highlight: Patient safety
   theme_slugs:
   - patient-safety
@@ -235,7 +235,7 @@ outputs:
   description: Conference paper on optimization of skill allocation in healthcare facilities using variable
     neighborhood descent. Publicly available sources confirm the bibliographic record, but I could not
     verify a public abstract.
-  summary_note: The summary above is intentionally conservative because the verified public sources I
+  # summary_note: The summary above is intentionally conservative because the verified public sources I
     found expose the title, venue, page number, and authorship, but not a public abstract.
   highlight: CIE52
   theme_slugs:
@@ -347,7 +347,7 @@ outputs:
   authors: Moustafa Abdelwanis, Adriana Gabor, and Andrei Sleptchenko
   description: Conference paper on decentralized manufacturing optimization. Publicly available sources
     confirm the bibliographic record and authorship, but I could not verify a public abstract.
-  summary_note: The summary above is title-based because the verified public sources I found expose the
+  # summary_note: The summary above is title-based because the verified public sources I found expose the
     title, venue, page number, and authorship, but not a public abstract.
   highlight: Best Paper Award context
   theme_slugs:
