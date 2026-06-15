@@ -145,7 +145,7 @@ redirect_from:
           <li><strong>{{ grant.title }}</strong>, {{ grant.sponsor }} — <em>{{ grant.project_title }}</em> ({{ grant.role }}, {{ grant.amount }}).</li>
           {% endfor %}
         {% else %}
-          <li><strong>International Research Grant</strong>, GMU, UAE — <em>Human-AI Collaboration in Medical Training: Balancing Learning Acceleration Against Automation Bias</em> (Co-Investigator, Approximately AED 90,000).</li>
+          <li><strong>International Research Grant</strong>, Gulf Medical University (GMU), UAE — <em>Human-AI Collaboration in Medical Training: Balancing Learning Acceleration Against Automation Bias</em> (Co-Investigator, Approximately AED 90,000).</li>
         {% endif %}
       </ul>
     </article>
