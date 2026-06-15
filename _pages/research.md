@@ -31,10 +31,14 @@ My research integrates operations management, simulation, machine learning, and 
 
 - **Role:** Co-Investigator
 - **Grant scheme:** International Research Grant
-- **Sponsor:** Gulf Medical University (GMU), UAE
+- **Sponsor:** GMU, UAE
 - **Funding:** Approximately AED 90,000
 - **Focus:** Funded project on how AI-supported medical training can accelerate learning while mitigating automation bias and preserving safe human judgment.
 {% endif %}
+
+## Core research themes
+
+The topics below organize my research agenda across healthcare operations, AI adoption, human factors, and analytics. Together, they show how my work moves from funded projects and safety questions to methods development and applied decision support.
 
 ## 1. AI adoption in healthcare
 
