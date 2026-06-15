@@ -21,6 +21,10 @@ redirect_from:
 {% if profile and profile.scholar_metrics %}
   {% assign scholar = profile.scholar_metrics %}
 {% endif %}
+{% assign grants = nil %}
+{% if profile and profile.grants %}
+  {% assign grants = profile.grants %}
+{% endif %}
 
 <section class="page__hero--custom">
   <div class="hero-badge">Engineering Systems and Management • Khalifa University</div>
@@ -28,7 +32,7 @@ redirect_from:
   <p class="hero-subtitle">Ph.D. candidate researching operations management, AI in healthcare, human-AI interaction, simulation, and optimization, with a focus on safe and practically deployable decision support for healthcare and service systems.</p>
   <div class="hero-actions">
     <a class="btn btn--primary" href="/publications/">View Publications</a>
-    <!-- <a class="btn btn--inverse" href="/files/Moustafa_Abdelwanis_CV.pdf">Download CV</a> -->
+    <a class="btn btn--inverse" href="/files/Moustafa_Abdelwanis_CV.pdf">Download CV</a>
     <a class="btn btn--inverse" href="https://scholar.google.com/citations?hl=en&user=VwCuh7MAAAAJ&view_op=list_works">Google Scholar</a>
     <a class="btn btn--inverse" href="mailto:moustafa.abdelwanis@ku.ac.ae">Email</a>
   </div>
@@ -105,7 +109,7 @@ redirect_from:
 
 <section class="section-block">
   <h2 class="section-title">Current profile</h2>
-  <p class="section-intro">A concise overview of my current academic position, research orientation, and recognition.</p>
+  <p class="section-intro">A concise overview of my current academic position, research orientation, recognition, and funded work.</p>
 
   <div class="profile-grid">
     <article class="snapshot-card">
@@ -133,13 +137,24 @@ redirect_from:
           <li>Outstanding Graduate Student, Graduate Students Research Awards, Khalifa University, 2024.</li>
         {% endif %}
       </ul>
+
+      <h3>Research funding</h3>
+      <ul class="point-list">
+        {% if grants and grants.size > 0 %}
+          {% for grant in grants limit: 1 %}
+          <li><strong>{{ grant.title }}</strong>, {{ grant.sponsor }} — <em>{{ grant.project_title }}</em> ({{ grant.role }}, {{ grant.amount }}).</li>
+          {% endfor %}
+        {% else %}
+          <li><strong>International Research Grant</strong>, GMU, UAE — <em>Human-AI Collaboration in Medical Training: Balancing Learning Acceleration Against Automation Bias</em> (Co-Investigator, Approximately AED 90,000).</li>
+        {% endif %}
+      </ul>
     </article>
   </div>
 </section>
 
 <section class="section-block">
   <h2 class="section-title">Selected publications</h2>
-  <!-- <p class="section-intro">These featured papers are manually curated from the publication records used on this site. Update <code>_data/publications.yml</code> when you want to change the homepage highlights.</p> -->
+  <p class="section-intro">These featured papers are manually curated from the publication records used on this site. Update <code>_data/publications.yml</code> when you want to change the homepage highlights.</p>
 
   <div class="publication-list">
     {% for item in featured %}
