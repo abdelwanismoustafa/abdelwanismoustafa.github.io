@@ -109,10 +109,8 @@ redirect_from:
       <ul class="point-list">
         <li>Ph.D. candidate in Engineering Systems and Management at Khalifa University.</li>
         <li>Graduate Research and Teaching Assistant since 2021.</li>
-        <!-- <li>M.Sc. in Engineering Systems and Management, Khalifa University; B.Sc. in Mechanical Engineering with specialization in Industrial Engineering, The American University in Cairo.</li> -->
         <li>Research spanning operations management, AI in healthcare, human-AI interaction, simulation, and optimization.</li>
         <li>{{ pub_data.analytics.listed_outputs }} featured research outputs on this site, including {{ pub_data.analytics.journal_articles }} journal articles and {{ pub_data.analytics.conference_papers }} conference papers.</li>
-        <!-- <li>{% if scholar %}{{ scholar.citations }} Google Scholar citations, h-index {{ scholar.h_index }}, and i10-index {{ scholar.i10_index }}.{% elsif pub_data.analytics.citations %}{{ pub_data.analytics.citations }} Google Scholar citations, h-index {{ pub_data.analytics.h_index }}, and i10-index {{ pub_data.analytics.i10_index }}.{% endif %}</li> -->
         <li>Methods toolkit including simulation modeling, optimization, variable neighborhood search, Bowtie analysis, structural equation modeling, Python, R, and AnyLogic.</li>
       </ul>
     </article>
