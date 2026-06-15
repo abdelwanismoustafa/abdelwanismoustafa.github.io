@@ -22,7 +22,6 @@ author_profile: true
   <div class="hero-actions">
     <a class="btn btn--primary" href="{{ pub_data.profiles.scholar_url }}">{{ pub_data.profiles.scholar_label }}</a>
     <a class="btn btn--inverse" href="{{ pub_data.profiles.orcid_url }}">{{ pub_data.profiles.orcid_label }}</a>
-    <a class="btn btn--inverse" href="/files/Moustafa_Abdelwanis_CV.pdf">Download CV</a>
   </div>
 </section>
 
