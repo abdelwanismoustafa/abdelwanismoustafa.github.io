@@ -110,7 +110,7 @@ redirect_from:
         <li>Graduate Research and Teaching Assistant since 2021.</li>
         <li>Research spanning operations management, AI in healthcare, human-AI interaction, simulation, and optimization.</li>
         <li>{{ pub_data.analytics.listed_outputs }} featured research outputs on this site, including {{ pub_data.analytics.journal_articles }} journal articles and {{ pub_data.analytics.conference_papers }} conference papers.</li>
-        <li>Methods toolkit including simulation modeling, optimization, variable neighborhood search, Simulation-based optimization, Bowtie analysis, structural equation modeling, SEIPS. Softwares include R, and AnyLogic. Programming language: Python </li>
+        <li>Methods toolkit including simulation modeling, optimization, variable neighborhood search, Simulation-based optimization, Bowtie analysis, structural equation modeling, system-thinking, and SEIPS model. Softwares include Jamovi, R, and AnyLogic. Programming language: Python </li>
       </ul>
     </article>
     <article class="snapshot-card">
