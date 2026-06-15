@@ -38,8 +38,6 @@ My research integrates operations management, simulation, machine learning, and 
 
 ## Core research themes
 
-The topics below organize my research agenda across healthcare operations, AI adoption, human factors, and analytics. Together, they show how my work moves from funded projects and safety questions to methods development and applied decision support.
-
 ## 1. AI adoption in healthcare
 
 I study the organizational, behavioral, and safety factors that influence the adoption of AI in healthcare settings. This includes healthcare providers' perceptions, implementation barriers, and the design of interventions that improve trust, safety, usability, and human oversight.
