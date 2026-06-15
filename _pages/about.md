@@ -4,28 +4,26 @@ title: ""
 permalink: /
 author_profile: true
 redirect_from:
-  - /about/
+/about/
 ---
-
 {% assign pub_data = site.data.publications %}
 {% assign profile = site.data.site_profile %}
 {% assign featured = pub_data.selected_outputs %}
 {% if featured == nil or featured.size == 0 %}
-  {% assign featured = pub_data.outputs | slice: 0, 4 %}
+{% assign featured = pub_data.outputs | slice: 0, 4 %}
 {% endif %}
 {% assign awards_count = 3 %}
 {% if profile and profile.awards %}
-  {% assign awards_count = profile.awards | size %}
+{% assign awards_count = profile.awards | size %}
 {% endif %}
 {% assign scholar = nil %}
 {% if profile and profile.scholar_metrics %}
-  {% assign scholar = profile.scholar_metrics %}
+{% assign scholar = profile.scholar_metrics %}
 {% endif %}
 {% assign grants = nil %}
 {% if profile and profile.grants %}
-  {% assign grants = profile.grants %}
+{% assign grants = profile.grants %}
 {% endif %}
-
 <section class="page__hero--custom">
   <div class="hero-badge">Engineering Systems and Management • Khalifa University</div>
   <h1 class="hero-title">Moustafa Abdelwanis</h1>
@@ -37,7 +35,6 @@ redirect_from:
     <a class="btn btn--inverse" href="mailto:moustafa.abdelwanis@ku.ac.ae">Email</a>
   </div>
 </section>
-
 <section class="quick-stats">
   <div class="stat-card">
     <span class="stat-number">{{ pub_data.analytics.listed_outputs }}</span>
@@ -60,18 +57,15 @@ redirect_from:
     <div class="stat-label">Including CIE 50 Best Paper, GSRC Best Paper, and Outstanding Graduate Student at Khalifa University.</div>
   </div>
 </section>
-
 {% if scholar %}
 <p class="stats-note">Current analytics shown on the site: {{ scholar.citations }} Google Scholar citations, h-index {{ scholar.h_index }}, and i10-index {{ scholar.i10_index }}.</p>
 {% elsif pub_data.analytics.citations %}
 <p class="stats-note">Current analytics shown on the site: {{ pub_data.analytics.citations }} Google Scholar citations, h-index {{ pub_data.analytics.h_index }}, and i10-index {{ pub_data.analytics.i10_index }}.</p>
 {% endif %}
-
 <section class="section-block">
   <h2 class="section-title">Research focus</h2>
   <p class="section-intro">My work sits at the intersection of operations management, AI in healthcare, human factors, and analytics. I am interested in how intelligent systems can improve healthcare and service operations while remaining safe, human-centered, and operationally realistic.</p>
-
-  <div class="research-grid">
+<div class="research-grid">
     <article class="theme-card">
       <div class="card-label">AI in healthcare</div>
       <h3>Adoption, trust, and automation risk</h3>
@@ -82,7 +76,6 @@ redirect_from:
         <li class="tag">Healthcare safety</li>
       </ul>
     </article>
-
     <article class="theme-card">
       <div class="card-label">Operations research</div>
       <h3>Simulation and optimization for service systems</h3>
@@ -104,25 +97,25 @@ redirect_from:
         <li class="tag">Healthcare analytics</li>
       </ul>
     </article>
-  </div>
+</div>
 </section>
-
 <section class="section-block">
   <h2 class="section-title">Current profile</h2>
   <p class="section-intro">A concise overview of my current academic position, research orientation, recognition, and funded work.</p>
-
-  <div class="profile-grid">
+<div class="profile-grid">
     <article class="snapshot-card">
       <div class="card-label">Academic snapshot</div>
-      <h3>Position and research setting</h3>
+      <h3>Position, training, and research profile</h3>
       <ul class="point-list">
         <li>Ph.D. candidate in Engineering Systems and Management at Khalifa University.</li>
         <li>Graduate Research and Teaching Assistant since 2021.</li>
+        <!-- <li>M.Sc. in Engineering Systems and Management, Khalifa University; B.Sc. in Mechanical Engineering with specialization in Industrial Engineering, The American University in Cairo.</li> -->
         <li>Research spanning operations management, AI in healthcare, human-AI interaction, simulation, and optimization.</li>
+        <li>{{ pub_data.analytics.listed_outputs }} featured research outputs on this site, including {{ pub_data.analytics.journal_articles }} journal articles and {{ pub_data.analytics.conference_papers }} conference papers.</li>
+        <!-- <li>{% if scholar %}{{ scholar.citations }} Google Scholar citations, h-index {{ scholar.h_index }}, and i10-index {{ scholar.i10_index }}.{% elsif pub_data.analytics.citations %}{{ pub_data.analytics.citations }} Google Scholar citations, h-index {{ pub_data.analytics.h_index }}, and i10-index {{ pub_data.analytics.i10_index }}.{% endif %}</li> -->
         <li>Methods toolkit including simulation modeling, optimization, variable neighborhood search, Bowtie analysis, structural equation modeling, Python, R, and AnyLogic.</li>
       </ul>
     </article>
-
     <article class="snapshot-card">
       <div class="card-label">Recognition</div>
       <h3>Awards and distinction</h3>
@@ -145,18 +138,16 @@ redirect_from:
           <li><strong>{{ grant.title }}</strong>, {{ grant.sponsor }} — <em>{{ grant.project_title }}</em> ({{ grant.role }}, {{ grant.amount }}).</li>
           {% endfor %}
         {% else %}
-          <li><strong>International Research Grant</strong>, Gulf Medical University (GMU), UAE — <em>Human-AI Collaboration in Medical Training: Balancing Learning Acceleration Against Automation Bias</em> (Co-Investigator, Approximately AED 90,000).</li>
+          <li><strong>International Research Grant</strong>, GMU, UAE — <em>Human-AI Collaboration in Medical Training: Balancing Learning Acceleration Against Automation Bias</em> (Co-Investigator, Approximately AED 90,000).</li>
         {% endif %}
       </ul>
     </article>
-  </div>
+</div>
 </section>
-
 <section class="section-block">
   <h2 class="section-title">Selected publications</h2>
   <p class="section-intro">These featured papers are manually curated from the publication records used on this site. Update <code>_data/publications.yml</code> when you want to change the homepage highlights.</p>
-
-  <div class="publication-list">
+<div class="publication-list">
     {% for item in featured %}
     <article class="pub-card">
       <div class="pub-meta">
@@ -174,7 +165,6 @@ redirect_from:
     {% endfor %}
   </div>
 </section>
-
 <section class="contact-strip">
   <div>
     <h3>Open to research collaboration and academic exchange</h3>
