@@ -1,10 +1,9 @@
 ---
 layout: archive
-title: ""
 permalink: /
 author_profile: true
 redirect_from:
-/about/
+  - /about/
 ---
 {% assign pub_data = site.data.publications %}
 {% assign profile = site.data.site_profile %}
