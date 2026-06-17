@@ -436,11 +436,15 @@ body {
 }
 
 @media (max-width: 1024px) {
-  #main {
+  #main,
+  .page,
+  .page__inner-wrap,
+  .page__content,
+  .page__hero--custom {
     position: relative;
-    isolation: isolate;
   }
 
+  #main,
   .page,
   .page__inner-wrap,
   .page__content,
@@ -448,45 +452,51 @@ body {
   .quick-stats,
   .profile-grid,
   .research-grid {
-    position: relative;
-    z-index: 1;
+    z-index: 1 !important;
   }
 
   .sidebar {
     position: relative;
-    z-index: 1000;
+    z-index: 2000 !important;
     overflow: visible !important;
+    isolation: isolate;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 
   .author__profile {
     position: relative;
-    z-index: 1001;
+    z-index: 2001 !important;
     overflow: visible !important;
   }
 
   .author__urls-wrapper {
     position: relative;
-    z-index: 1002;
+    z-index: 2002 !important;
     overflow: visible !important;
   }
 
   .author__urls-wrapper .author__urls {
     position: absolute !important;
-    right: 0 !important;
-    left: auto !important;
     top: calc(100% + 0.65rem) !important;
     bottom: auto !important;
+    right: 0 !important;
+    left: auto !important;
+    inset-inline-start: auto !important;
+    inset-inline-end: 0 !important;
     margin-top: 0 !important;
-    min-width: 10rem;
+    min-width: 15rem;
     max-width: calc(100vw - 2rem);
-    z-index: 1003 !important;
+    z-index: 2003 !important;
   }
 
   .author__urls-wrapper .author__urls::before {
     top: -11px !important;
     bottom: auto !important;
     left: auto !important;
-    right: 28px !important;
+    right: 26px !important;
+    inset-inline-start: auto !important;
+    inset-inline-end: 26px !important;
     border-width: 0 10px 10px 10px !important;
     border-color: transparent transparent var(--global-border-color) transparent !important;
   }
@@ -495,7 +505,9 @@ body {
     top: -10px !important;
     bottom: auto !important;
     left: auto !important;
-    right: 28px !important;
+    right: 26px !important;
+    inset-inline-start: auto !important;
+    inset-inline-end: 26px !important;
     border-width: 0 10px 10px 10px !important;
     border-color: transparent transparent var(--global-bg-color) transparent !important;
   }
