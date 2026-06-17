@@ -436,43 +436,67 @@ body {
 }
 
 @media (max-width: 1024px) {
+  #main {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .page,
+  .page__inner-wrap,
+  .page__content,
+  .page__hero--custom,
+  .quick-stats,
+  .profile-grid,
+  .research-grid {
+    position: relative;
+    z-index: 1;
+  }
+
   .sidebar {
     position: relative;
-    z-index: 40;
-    overflow: visible;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    z-index: 1000;
+    overflow: visible !important;
+  }
+
+  .author__profile {
+    position: relative;
+    z-index: 1001;
+    overflow: visible !important;
   }
 
   .author__urls-wrapper {
     position: relative;
-    z-index: 60;
+    z-index: 1002;
+    overflow: visible !important;
   }
 
-  .author__urls {
-    position: absolute;
-    inset-inline-start: 0;
-    inset-inline-end: auto;
-    top: auto;
-    bottom: calc(100% + 0.65rem);
-    margin-top: 0;
+  .author__urls-wrapper .author__urls {
+    position: absolute !important;
+    right: 0 !important;
+    left: auto !important;
+    top: calc(100% + 0.65rem) !important;
+    bottom: auto !important;
+    margin-top: 0 !important;
     min-width: 15rem;
-    z-index: 80;
+    max-width: calc(100vw - 2rem);
+    z-index: 1003 !important;
   }
 
-  .author__urls::before {
-    top: auto;
-    bottom: -11px;
-    inset-inline-start: 24px;
-    border-width: 10px 10px 0 10px;
-    border-color: var(--global-border-color) transparent transparent transparent;
+  .author__urls-wrapper .author__urls::before {
+    top: -11px !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: 28px !important;
+    border-width: 0 10px 10px 10px !important;
+    border-color: transparent transparent var(--global-border-color) transparent !important;
   }
 
-  .author__urls::after {
-    top: auto;
-    bottom: -10px;
-    inset-inline-start: 24px;
-    border-width: 10px 10px 0 10px;
-    border-color: var(--global-bg-color) transparent transparent transparent;
+  .author__urls-wrapper .author__urls::after {
+    top: -10px !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: 28px !important;
+    border-width: 0 10px 10px 10px !important;
+    border-color: transparent transparent var(--global-bg-color) transparent !important;
   }
 }
