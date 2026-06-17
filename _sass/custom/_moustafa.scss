@@ -444,41 +444,35 @@ body {
     transform: translate3d(0, 0, 0);
   }
 
-  .author__profile {
+  .author__urls-wrapper {
     position: relative;
+    z-index: 60;
+  }
+
+  .author__urls {
+    position: absolute;
+    inset-inline-start: 0;
+    inset-inline-end: auto;
+    top: auto;
+    bottom: calc(100% + 0.65rem);
+    margin-top: 0;
+    min-width: 15rem;
     z-index: 80;
   }
 
-  .author__urls-wrapper {
-    position: relative;
-    z-index: 120;
-    overflow: visible;
+  .author__urls::before {
+    top: auto;
+    bottom: -11px;
+    inset-inline-start: 24px;
+    border-width: 10px 10px 0 10px;
+    border-color: var(--global-border-color) transparent transparent transparent;
   }
 
-  .author__urls-wrapper .author__urls {
-    position: absolute !important;
-    left: 0 !important;
-    right: auto !important;
-    top: auto !important;
-    bottom: calc(100% + 0.75rem) !important;
-    margin-top: 0 !important;
-    min-width: 15rem;
-    z-index: 9999 !important;
-  }
-
-  .author__urls-wrapper .author__urls::before {
-    top: 100% !important;
-    bottom: auto !important;
-    left: 24px !important;
-    border-width: 10px 10px 0 10px !important;
-    border-color: var(--global-border-color) transparent transparent transparent !important;
-  }
-
-  .author__urls-wrapper .author__urls::after {
-    top: calc(100% - 1px) !important;
-    bottom: auto !important;
-    left: 24px !important;
-    border-width: 10px 10px 0 10px !important;
-    border-color: var(--global-bg-color) transparent transparent transparent !important;
+  .author__urls::after {
+    top: auto;
+    bottom: -10px;
+    inset-inline-start: 24px;
+    border-width: 10px 10px 0 10px;
+    border-color: var(--global-bg-color) transparent transparent transparent;
   }
 }
