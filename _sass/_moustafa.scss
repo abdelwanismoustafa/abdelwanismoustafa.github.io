@@ -710,8 +710,8 @@ body {
     position: absolute;
     inset-inline-start: 0;
     inset-inline-end: auto;
-    top: auto;
-    bottom: calc(100% + 0.65rem);
+    top: calc(100% + 0.65rem);
+    bottom: auto;
     margin-top: 0;
     min-width: 15rem;
     z-index: 80;
