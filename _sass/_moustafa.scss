@@ -691,3 +691,45 @@ body {
     justify-content: center;
   }
 }
+
+@media (max-width: 1024px) {
+  .sidebar {
+    position: relative;
+    z-index: 40;
+    overflow: visible;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  .author__urls-wrapper {
+    position: relative;
+    z-index: 60;
+  }
+
+  .author__urls {
+    position: absolute;
+    inset-inline-start: 0;
+    inset-inline-end: auto;
+    top: auto;
+    bottom: calc(100% + 0.65rem);
+    margin-top: 0;
+    min-width: 15rem;
+    z-index: 80;
+  }
+
+  .author__urls::before {
+    top: auto;
+    bottom: -11px;
+    inset-inline-start: 24px;
+    border-width: 10px 10px 0 10px;
+    border-color: var(--global-border-color) transparent transparent transparent;
+  }
+
+  .author__urls::after {
+    top: auto;
+    bottom: -10px;
+    inset-inline-start: 24px;
+    border-width: 10px 10px 0 10px;
+    border-color: var(--global-bg-color) transparent transparent transparent;
+  }
+}
